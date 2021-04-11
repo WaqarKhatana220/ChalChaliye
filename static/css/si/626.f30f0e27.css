@@ -1,0 +1,441 @@
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 100;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiAyp8kv8JHgFVrJJLmE0tCMPI.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiAyp8kv8JHgFVrJJLmE0tMMPQ.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiAyp8kv8JHgFVrJJLmE0tMMPY.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiAyp8kv8JHgFVrJJLmE0tMMPU&skey=14913f5d70e4915e&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 200;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmv1pVF9eO.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmv1pVGdeI.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmv1pVGdeK.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiDyp8kv8JHgFVrJJLmv1pVGdeJ&skey=e6f64e60fb8d9268&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 300;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLm21lVF9eO.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLm21lVGdeI.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLm21lVGdeK.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiDyp8kv8JHgFVrJJLm21lVGdeJ&skey=b60188e8ecc47dee&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiGyp8kv8JHgFVrJJLucHtA.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiGyp8kv8JHgFVrJJLufntG.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiGyp8kv8JHgFVrJJLufntE.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiGyp8kv8JHgFVrJJLufntH&skey=f21d6e783fa43c88&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmg1hVF9eO.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmg1hVGdeI.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmg1hVGdeK.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiDyp8kv8JHgFVrJJLmg1hVGdeJ&skey=b0aa19767d34da85&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 600;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmr19VF9eO.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmr19VGdeI.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmr19VGdeK.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiDyp8kv8JHgFVrJJLmr19VGdeJ&skey=7fbc556774b13ef0&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmy15VF9eO.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmy15VGdeI.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmy15VGdeK.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiDyp8kv8JHgFVrJJLmy15VGdeJ&skey=29c3bd833a54ba8c&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 800;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLm111VF9eO.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLm111VGdeI.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLm111VGdeK.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiDyp8kv8JHgFVrJJLm111VGdeJ&skey=6ea139488603f28c&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 900;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLm81xVF9eO.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLm81xVGdeI.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLm81xVGdeK.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiDyp8kv8JHgFVrJJLm81xVGdeJ&skey=846b48b4eada095a&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 100;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiGyp8kv8JHgFVrLPTucHtA.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiGyp8kv8JHgFVrLPTufntG.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiGyp8kv8JHgFVrLPTufntE.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiGyp8kv8JHgFVrLPTufntH&skey=57be0781cfb72ecd&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 200;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLFj_Z1xlFQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLFj_Z1JlEw.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLFj_Z1JlEQ.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiByp8kv8JHgFVrLFj_Z1JlEg&skey=1bdc08fe61c3cc9e&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLDz8Z1JlEw.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLDz8Z1JlEQ.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiByp8kv8JHgFVrLDz8Z1JlEg&skey=4aabc5055a39e031&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiEyp8kv8JHgFVrJJfecg.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiEyp8kv8JHgFVrJJnedA.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiEyp8kv8JHgFVrJJnedg.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiEyp8kv8JHgFVrJJnedQ&skey=87759fb096548f6d&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLGT9Z1JlEw.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLGT9Z1JlEQ.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiByp8kv8JHgFVrLGT9Z1JlEg&skey=d4526a9b64c21b87&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLEj6Z1JlEw.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLEj6Z1JlEQ.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiByp8kv8JHgFVrLEj6Z1JlEg&skey=ce7ef9d62ca89319&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLCz7Z1JlEw.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLCz7Z1JlEQ.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiByp8kv8JHgFVrLCz7Z1JlEg&skey=cea76fe63715a67a&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 800;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLDD4Z1xlFQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLDD4Z1JlEw.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLDD4Z1JlEQ.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiByp8kv8JHgFVrLDD4Z1JlEg&skey=f01e006f58df81ac&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 900;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLBT5Z1xlFQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLBT5Z1JlEw.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLBT5Z1JlEQ.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiByp8kv8JHgFVrLBT5Z1JlEg&skey=6c361c40a830b323&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+.clearfix {
+  clear: both;
+  float: none;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.wt-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  width: 100%;
+  font-family: 'Poppins', 'Arial', 'sans-serif' !important;
+}
+.rate {
+  display: inline-block;
+  text-align: left;
+  position: relative;
+  top: 2px;
+}
+.rate__score {
+  margin-left: 0;
+  position: relative;
+  display: inline-block;
+  background-size: cover;
+  height: 16px;
+  width: 16px;
+}
+.rate__score:not(:last-child) {
+  margin-right: 3px;
+}
+.rate__score--filled {
+  margin-left: 0;
+  display: block;
+}
+.rate__score--editable {
+  cursor: pointer;
+}
+.wt-icon-star-blue {
+  background-image: url("https://d3n6syiizmmdfa.cloudfront.net/master/core-app/assets/icons/wt-icon-star-blue.svg");
+}
+.wt-icon-star-gray {
+  background-image: url("https://d3n6syiizmmdfa.cloudfront.net/master/core-app/assets/icons/wt-icon-star-gray.svg");
+}
+.reviewWidget {
+  width: 202px;
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: normal;
+  color: #4e5759;
+  border: 1px solid #e8e9e9;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.reviewWidget__top {
+  height: 68px;
+  border-radius: 5px;
+  background-color: #19bed3;
+  padding-top: 10px;
+}
+.reviewWidget__title {
+  color: white;
+  font-size: 12px;
+  margin: 0;
+  font-weight: 400;
+}
+.reviewWidget__bottom {
+  background-color: #fbfbfb;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+.reviewWidget__averageText {
+  font-size: 12px;
+  color: #4e5759;
+}
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 100;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiAyp8kv8JHgFVrJJLmE0tCMPI.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiAyp8kv8JHgFVrJJLmE0tMMPQ.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiAyp8kv8JHgFVrJJLmE0tMMPY.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiAyp8kv8JHgFVrJJLmE0tMMPU&skey=14913f5d70e4915e&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 200;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmv1pVF9eO.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmv1pVGdeI.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmv1pVGdeK.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiDyp8kv8JHgFVrJJLmv1pVGdeJ&skey=e6f64e60fb8d9268&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 300;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLm21lVF9eO.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLm21lVGdeI.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLm21lVGdeK.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiDyp8kv8JHgFVrJJLm21lVGdeJ&skey=b60188e8ecc47dee&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiGyp8kv8JHgFVrJJLucHtA.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiGyp8kv8JHgFVrJJLufntG.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiGyp8kv8JHgFVrJJLufntE.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiGyp8kv8JHgFVrJJLufntH&skey=f21d6e783fa43c88&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmg1hVF9eO.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmg1hVGdeI.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmg1hVGdeK.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiDyp8kv8JHgFVrJJLmg1hVGdeJ&skey=b0aa19767d34da85&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 600;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmr19VF9eO.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmr19VGdeI.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmr19VGdeK.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiDyp8kv8JHgFVrJJLmr19VGdeJ&skey=7fbc556774b13ef0&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmy15VF9eO.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmy15VGdeI.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLmy15VGdeK.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiDyp8kv8JHgFVrJJLmy15VGdeJ&skey=29c3bd833a54ba8c&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 800;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLm111VF9eO.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLm111VGdeI.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLm111VGdeK.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiDyp8kv8JHgFVrJJLm111VGdeJ&skey=6ea139488603f28c&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 900;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLm81xVF9eO.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLm81xVGdeI.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiDyp8kv8JHgFVrJJLm81xVGdeK.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiDyp8kv8JHgFVrJJLm81xVGdeJ&skey=846b48b4eada095a&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 100;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiGyp8kv8JHgFVrLPTucHtA.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiGyp8kv8JHgFVrLPTufntG.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiGyp8kv8JHgFVrLPTufntE.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiGyp8kv8JHgFVrLPTufntH&skey=57be0781cfb72ecd&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 200;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLFj_Z1xlFQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLFj_Z1JlEw.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLFj_Z1JlEQ.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiByp8kv8JHgFVrLFj_Z1JlEg&skey=1bdc08fe61c3cc9e&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLDz8Z1JlEw.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLDz8Z1JlEQ.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiByp8kv8JHgFVrLDz8Z1JlEg&skey=4aabc5055a39e031&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiEyp8kv8JHgFVrJJfecg.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiEyp8kv8JHgFVrJJnedA.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiEyp8kv8JHgFVrJJnedg.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiEyp8kv8JHgFVrJJnedQ&skey=87759fb096548f6d&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLGT9Z1JlEw.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLGT9Z1JlEQ.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiByp8kv8JHgFVrLGT9Z1JlEg&skey=d4526a9b64c21b87&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLEj6Z1JlEw.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLEj6Z1JlEQ.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiByp8kv8JHgFVrLEj6Z1JlEg&skey=ce7ef9d62ca89319&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLCz7Z1JlEw.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLCz7Z1JlEQ.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiByp8kv8JHgFVrLCz7Z1JlEg&skey=cea76fe63715a67a&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 800;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLDD4Z1xlFQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLDD4Z1JlEw.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLDD4Z1JlEQ.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiByp8kv8JHgFVrLDD4Z1JlEg&skey=f01e006f58df81ac&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 900;
+  src: url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLBT5Z1xlFQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLBT5Z1JlEw.woff) format("woff"),url(//fonts.gstatic.com/s/poppins/v13/pxiByp8kv8JHgFVrLBT5Z1JlEQ.eot?#) format("eot"),url(//fonts.gstatic.com/l/font?kit=pxiByp8kv8JHgFVrLBT5Z1JlEg&skey=6c361c40a830b323&v=v13#Poppins) format("svg");
+  font-display: block;
+}
+.clearfix {
+  clear: both;
+  float: none;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.wt-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  width: 100%;
+  font-family: 'Poppins', 'Arial', 'sans-serif' !important;
+}
+.wt-icon-calendar-grey {
+  background-image: url("https://d3n6syiizmmdfa.cloudfront.net/master/core-app/assets/icons/wt-icon-calendar-grey.svg");
+  position: absolute;
+  top: 13px;
+  left: 12px;
+  width: 19px;
+  height: 18px;
+  vertical-align: middle;
+  z-index: 1;
+}
+.wt-icon-calendar-grey--right {
+  left: inherit;
+  margin: 0;
+  top: 10px;
+  right: 15px;
+}
+.wt-icon-button-widget,
+.wt-icon-button-widget--active {
+  background-image: url("https://d3n6syiizmmdfa.cloudfront.net/master/core-app/assets/icons/wt-icon-button-widget.svg");
+  width: 30px;
+  height: 28px;
+  cursor: pointer;
+  padding: 17px;
+  background-repeat: no-repeat;
+}
+.wt-icon-button-widget--active {
+  background-image: url("https://d3n6syiizmmdfa.cloudfront.net/master/core-app/assets/icons/wt-icon-button-widget-active.svg");
+}
+.wt-icon-widget-packages,
+.wt-icon-widget-packages--active {
+  background-image: url("https://d3n6syiizmmdfa.cloudfront.net/master/core-app/assets/icons/wt-icon-widget-packages.svg");
+  width: 30px;
+  height: 28px;
+  cursor: pointer;
+  padding: 17px;
+  background-repeat: no-repeat;
+}
+.wt-icon-widget-packages--active {
+  background-image: url("https://d3n6syiizmmdfa.cloudfront.net/master/core-app/assets/icons/wt-icon-widget-packages-active.svg");
+}
+.wt-icon-widget-direct-link,
+.wt-icon-widget-direct-link--active {
+  background-image: url("https://d3n6syiizmmdfa.cloudfront.net/master/core-app/assets/icons/wt-icon-widget-direct-link.svg");
+  width: 30px;
+  height: 28px;
+  cursor: pointer;
+  padding: 17px;
+  background-repeat: no-repeat;
+}
+.wt-icon-widget-direct-link--active {
+  background-image: url("https://d3n6syiizmmdfa.cloudfront.net/master/core-app/assets/icons/wt-icon-widget-direct-link-active.svg");
+}
+.wt-icon-all-trips,
+.wt-icon-all-trips--active {
+  background-image: url("https://d3n6syiizmmdfa.cloudfront.net/master/core-app/assets/icons/wt-icon-all-trips.svg");
+  width: 30px;
+  height: 28px;
+  cursor: pointer;
+  padding: 17px;
+  background-repeat: no-repeat;
+}
+.wt-icon-all-trips--active {
+  background-image: url("https://d3n6syiizmmdfa.cloudfront.net/master/core-app/assets/icons/wt-icon-all-trips-active.svg");
+}
+.wt-icon-widget-arrow-right {
+  background-image: url("https://d3n6syiizmmdfa.cloudfront.net/master/core-app/assets/icons/wt-icon-widget-arrow-right.svg");
+  width: 8px;
+  height: 18px;
+  cursor: pointer;
+  padding: 5px;
+  background-repeat: no-repeat;
+}
+.wt-icon-widget-review,
+.wt-icon-widget-review--active {
+  background-image: url("https://d3n6syiizmmdfa.cloudfront.net/master/core-app/assets/icons/wt-icon-widget-review.svg");
+  width: 30px;
+  height: 28px;
+  cursor: pointer;
+  padding: 17px;
+  background-repeat: no-repeat;
+}
+.wt-icon-widget-review--active {
+  background-image: url("https://d3n6syiizmmdfa.cloudfront.net/master/core-app/assets/icons/wt-icon-widget-review-active.svg");
+}
+

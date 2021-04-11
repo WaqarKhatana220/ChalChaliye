@@ -1,0 +1,51 @@
+PROJECT S 	 
+
+ 
+
+Software Engineering 
+
+Travelling App Travello: 
+
+•    Development of an app managing Posting Trips and Selecting Trip. 
+
+Framework: Django. 
+
+Work: Backend Developer (Handle URLs mapping, Database management, Forms Creation, View Management, Creating templates) 
+
+ 
+
+DataBases:                                                                                                                            
+
+Train Management System: 
+
+•    Development of an app for Booking Tickets Online and Train route Management System. 
+
+Framework: Flask. 
+
+Work: Database Management (Writing queries for the in order to retrieve data from data base and send it to backend to perform required methods.) 
+
+ 
+
+Data Mining                                                                                                                                        
+
+ Data Analysis 
+
+•    Data pre-processing, Frequent Pattern Mining, Cluster Analysis, Sequence Pattern Mining.       
+
+      Django 
+
+       	Blog App: 
+
+•    Development of an app managing Posting Blogs. 
+
+Framework: Django. 
+
+Work: Backend Developer (Handle URLs mapping, Database management, Forms Creation, View Management, Creating templates, Bootstrap, CSS, Html) 
+
+    	  Clinical System: 
+
+	•    Development of an app for making slots for patients and keeping their Medical Record. 
+
+Framework: Django. 
+
+Work: Backend Developer (Handle URLs mapping, Database management, Forms Creation, View Management, Creating templates, Bootstrap, CSS, Html) 
