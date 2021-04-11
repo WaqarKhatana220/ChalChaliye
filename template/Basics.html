@@ -1,0 +1,1807 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://www.wetravel.com/itinerary_builder/21197915#/builder/trip-basics -->
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+    @keyframes beginBrowserAutofill {
+      0% {}
+
+      to {}
+    }
+
+    @keyframes endBrowserAutofill {
+      0% {}
+
+      to {}
+    }
+
+    .pac-container {
+      background-color: #fff;
+      position: absolute !important;
+      z-index: 1000;
+      border-radius: 2px;
+      border-top: 1px solid #d9d9d9;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      overflow: hidden
+    }
+
+    .pac-logo:after {
+      content: "";
+      padding: 1px 1px 1px 0;
+      height: 18px;
+      box-sizing: border-box;
+      text-align: right;
+      display: block;
+      background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: 120px 14px
+    }
+
+    .hdpi.pac-logo:after {
+      background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)
+    }
+
+    .pac-item {
+      cursor: default;
+      padding: 0 4px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      line-height: 30px;
+      text-align: left;
+      border-top: 1px solid #e6e6e6;
+      font-size: 11px;
+      color: #999
+    }
+
+    .pac-item:hover {
+      background-color: #fafafa
+    }
+
+    .pac-item-selected,
+    .pac-item-selected:hover {
+      background-color: #ebf2fe
+    }
+
+    .pac-matched {
+      font-weight: 700
+    }
+
+    .pac-item-query {
+      font-size: 13px;
+      padding-right: 3px;
+      color: #000
+    }
+
+    .pac-icon {
+      width: 15px;
+      height: 20px;
+      margin-right: 7px;
+      margin-top: 6px;
+      display: inline-block;
+      vertical-align: top;
+      background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);
+      background-size: 34px
+    }
+
+    .hdpi .pac-icon {
+      background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png)
+    }
+
+    .pac-icon-search {
+      background-position: -1px -1px
+    }
+
+    .pac-item-selected .pac-icon-search {
+      background-position: -18px -1px
+    }
+
+    .pac-icon-marker {
+      background-position: -1px -161px
+    }
+
+    .pac-item-selected .pac-icon-marker {
+      background-position: -18px -161px
+    }
+
+    .pac-placeholder {
+      color: gray
+    }
+
+    .pac-target-input:-webkit-autofill {
+      animation-name: beginBrowserAutofill
+    }
+
+    .pac-target-input:not(:-webkit-autofill) {
+      animation-name: endBrowserAutofill
+    }
+  </style>
+  <style>
+    @keyframes beginBrowserAutofill {
+      0% {}
+
+      to {}
+    }
+
+    @keyframes endBrowserAutofill {
+      0% {}
+
+      to {}
+    }
+
+    .pac-container {
+      background-color: #fff;
+      position: absolute !important;
+      z-index: 1000;
+      border-radius: 2px;
+      border-top: 1px solid #d9d9d9;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      overflow: hidden
+    }
+
+    .pac-logo:after {
+      content: "";
+      padding: 1px 1px 1px 0;
+      height: 18px;
+      box-sizing: border-box;
+      text-align: right;
+      display: block;
+      background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: 120px 14px
+    }
+
+    .hdpi.pac-logo:after {
+      background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)
+    }
+
+    .pac-item {
+      cursor: default;
+      padding: 0 4px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      line-height: 30px;
+      text-align: left;
+      border-top: 1px solid #e6e6e6;
+      font-size: 11px;
+      color: #999
+    }
+
+    .pac-item:hover {
+      background-color: #fafafa
+    }
+
+    .pac-item-selected,
+    .pac-item-selected:hover {
+      background-color: #ebf2fe
+    }
+
+    .pac-matched {
+      font-weight: 700
+    }
+
+    .pac-item-query {
+      font-size: 13px;
+      padding-right: 3px;
+      color: #000
+    }
+
+    .pac-icon {
+      width: 15px;
+      height: 20px;
+      margin-right: 7px;
+      margin-top: 6px;
+      display: inline-block;
+      vertical-align: top;
+      background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);
+      background-size: 34px
+    }
+
+    .hdpi .pac-icon {
+      background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png)
+    }
+
+    .pac-icon-search {
+      background-position: -1px -1px
+    }
+
+    .pac-item-selected .pac-icon-search {
+      background-position: -18px -1px
+    }
+
+    .pac-icon-marker {
+      background-position: -1px -161px
+    }
+
+    .pac-item-selected .pac-icon-marker {
+      background-position: -18px -161px
+    }
+
+    .pac-placeholder {
+      color: gray
+    }
+
+    .pac-target-input:-webkit-autofill {
+      animation-name: beginBrowserAutofill
+    }
+
+    .pac-target-input:not(:-webkit-autofill) {
+      animation-name: endBrowserAutofill
+    }
+  </style>
+  <style>
+    @keyframes beginBrowserAutofill {
+      0% {}
+
+      to {}
+    }
+
+    @keyframes endBrowserAutofill {
+      0% {}
+
+      to {}
+    }
+
+    .pac-container {
+      background-color: #fff;
+      position: absolute !important;
+      z-index: 1000;
+      border-radius: 2px;
+      border-top: 1px solid #d9d9d9;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      overflow: hidden
+    }
+
+    .pac-logo:after {
+      content: "";
+      padding: 1px 1px 1px 0;
+      height: 18px;
+      box-sizing: border-box;
+      text-align: right;
+      display: block;
+      background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: 120px 14px
+    }
+
+    .hdpi.pac-logo:after {
+      background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)
+    }
+
+    .pac-item {
+      cursor: default;
+      padding: 0 4px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      line-height: 30px;
+      text-align: left;
+      border-top: 1px solid #e6e6e6;
+      font-size: 11px;
+      color: #999
+    }
+
+    .pac-item:hover {
+      background-color: #fafafa
+    }
+
+    .pac-item-selected,
+    .pac-item-selected:hover {
+      background-color: #ebf2fe
+    }
+
+    .pac-matched {
+      font-weight: 700
+    }
+
+    .pac-item-query {
+      font-size: 13px;
+      padding-right: 3px;
+      color: #000
+    }
+
+    .pac-icon {
+      width: 15px;
+      height: 20px;
+      margin-right: 7px;
+      margin-top: 6px;
+      display: inline-block;
+      vertical-align: top;
+      background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);
+      background-size: 34px
+    }
+
+    .hdpi .pac-icon {
+      background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png)
+    }
+
+    .pac-icon-search {
+      background-position: -1px -1px
+    }
+
+    .pac-item-selected .pac-icon-search {
+      background-position: -18px -1px
+    }
+
+    .pac-icon-marker {
+      background-position: -1px -161px
+    }
+
+    .pac-item-selected .pac-icon-marker {
+      background-position: -18px -161px
+    }
+
+    .pac-placeholder {
+      color: gray
+    }
+
+    .pac-target-input:-webkit-autofill {
+      animation-name: beginBrowserAutofill
+    }
+
+    .pac-target-input:not(:-webkit-autofill) {
+      animation-name: endBrowserAutofill
+    }
+  </style>
+  <title class="next-head">WeTravel - Payment Platform for Travel Companies</title>
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/png" sizes="32x32" href="{%static 'pic/ourlogo.png'%}">
+  <link rel="manifest" href="https://cdn.wetravel.com/master/core-app/assets/favicons.ico/manifest.json">
+  <meta name="msapplication-TileImage"
+    content="https://cdn.wetravel.com/master/core-app/assets/favicons.ico/ms-icon-144x144.png">
+  <meta property="og:image" content="https://cdn.wetravel.com/master/core-app/assets/wetravel-400x400-logo.png">
+  <meta property="og:image:width" content="400">
+  <meta property="og:image:height" content="400">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description">
+  <meta name="keywords"
+    content="WeTravel, Travel, Travel Company, Travel Companies, Trip, Trip Organizer, Payment Platform, itinerary, collect payment, manage bookings">
+  <meta property="og:title" content="WeTravel - Payment Platform for Travel Companies">
+  <meta property="og:site_name">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" type="text/css" href="{%static 'css/Basic_trip/slick.min.css'%}">
+  <link rel="stylesheet" type="text/css" href="{%static 'css/Basic_trip/slick-theme.min.css'%}">
+  <meta property="fb:app_id" content="249127048544707">
+  <meta name="theme-color" content="#00C3D7">
+
+  <!-- WGCCxxx -->
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-N99W2X" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- End Google Tag Manager -->
+
+  <meta name="google-site-verification" content="mb627SqdRTqSb3quVoU1gQTgxkZ01bDLOc1cqtPmZtA">
+
+  <!-- Hotjar Tracking Code for www.wetravel.com -->
+  <link rel="preload" href="./WeTravel - Payment Platform for Travel Companies_files/_app.js" as="script">
+  <link rel="preload" href="./WeTravel - Payment Platform for Travel Companies_files/_error.js" as="script">
+  <link rel="preload" href="./WeTravel - Payment Platform for Travel Companies_files/webpack-4eb462437667ccc36ffd.js"
+    as="script">
+  <link rel="preload" href="{%static 'js/Btrip/common.js'%}"
+    as="script">
+  <link rel="preload" href="./WeTravel - Payment Platform for Travel Companies_files/main-f0ca07a0d3dd0d04313a.js"
+    as="script">
+  <link rel="stylesheet" href="{%static 'css/Basic_trip/trip_builder.js.8d0561fb.css'%}">
+  <link rel="stylesheet" href="{%static 'css/Basic_trip/_app.js.89df09ac.css'%}">
+  <style type="text/css">
+    iframe#_hjRemoteVarsFrame {
+      display: none !important;
+      width: 1px !important;
+      height: 1px !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css"
+    href="{%static 'css/Basic_trip/626.f30f0e27.css'%}">
+  <style type="text/css">
+    .Button__root___1gz0c {
+      display: inline-block;
+      margin: 0 5px 0 0;
+      padding: 3px 8px;
+      height: 30px;
+      line-height: 22px;
+      box-sizing: border-box;
+      background: none #fdfdfd;
+      background: linear-gradient(180deg, #fdfdfd 0, #f6f7f8);
+      border: 1px solid #999;
+      border-radius: 2px;
+      color: #333;
+      text-decoration: none;
+      font-size: inherit;
+      font-family: inherit;
+      cursor: pointer;
+      white-space: nowrap
+    }
+
+    .Button__root___1gz0c:disabled {
+      cursor: not-allowed;
+      background: none transparent
+    }
+
+    .Button__root___1gz0c:disabled>* {
+      opacity: .5
+    }
+  </style>
+  <style type="text/css">
+    .ButtonWrap__root___1EO_R {
+      display: inline-block;
+      position: relative;
+      z-index: 10
+    }
+  </style>
+  <style type="text/css">
+    .IconButton__root___3tqZW {
+      padding-left: 3px;
+      padding-right: 3px
+    }
+
+    .IconButton__icon___3YgOS {
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: 18px
+    }
+
+    .IconButton__isActive___2Ey8p {
+      background: none #d8d8d8
+    }
+
+    .IconButton__icon-undo___EQSRP {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTcuODU2IDI0YzIuNjY1LTQuODMgMy4xMTUtMTIuMTk1LTcuMzU2LTExLjk1VjE4bC05LTkgOS05djUuODJDMjMuMDM4IDUuNDk1IDI0LjQzNSAxNi44OSAxNy44NTYgMjR6Ii8+PC9zdmc+");
+      background-size: 14px
+    }
+
+    .IconButton__icon-redo___30MVz {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTMuNSA1LjgyVjBsOSA5LTkgOXYtNS45NUMzLjAzIDExLjgwNiAzLjQ3OCAxOS4xNyA2LjE0NCAyNC0uNDM2IDE2Ljg5Ljk2MiA1LjQ5NCAxMy41IDUuODJ6Ii8+PC9zdmc+");
+      background-size: 14px
+    }
+
+    .IconButton__icon-unordered-list-item___Pvkrr {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBkPSJNNC42NTYgMy4zNDRIMTR2MS4zMTNINC42NTZWMy4zNDR6bTAgNS4zMTJWNy4zNDNIMTR2MS4zMTNINC42NTZ6bTAgNHYtMS4zMTNIMTR2MS4zMTNINC42NTZ6bS0yLTEuNTNxLjM3NSAwIC42NC4yNXQuMjY3LjYyNC0uMjY2LjYyNS0uNjQuMjUtLjYyNi0uMjVUMS43OCAxMnQuMjUtLjYyNS42MjYtLjI1em0wLTguMTI2cS40MDYgMCAuNzAzLjI4dC4yOTYuNzItLjI5Ny43Mi0uNzA0LjI4LS43MDMtLjI4VDEuNjU2IDR0LjI5Ny0uNzIuNzAzLS4yOHptMCA0cS40MDYgMCAuNzAzLjI4dC4yOTYuNzItLjI5Ny43Mi0uNzA0LjI4LS43MDMtLjI4VDEuNjU2IDh0LjI5Ny0uNzIuNzAzLS4yOHoiLz48L3N2Zz4=")
+    }
+
+    .IconButton__icon-ordered-list-item___2rzD0 {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBkPSJNNC42NTYgOC42NTZWNy4zNDNIMTR2MS4zMTNINC42NTZ6bTAgNHYtMS4zMTNIMTR2MS4zMTNINC42NTZ6bTAtOS4zMTJIMTR2MS4zMTNINC42NTZWMy4zNDR6bS0zLjMxMiA0di0uNjg4aDJ2LjYyNWwtMS4yMiAxLjM3NmgxLjIydi42ODhoLTJWOC43MmwxLjE4OC0xLjM3NkgxLjM0NHptLjY1Ni0ydi0yaC0uNjU2di0uNjg4aDEuMzEzdjIuNjg4SDJ6bS0uNjU2IDZ2LS42ODhoMnYyLjY4OGgtMnYtLjY4OGgxLjMxM3YtLjMxM0gydi0uNjg4aC42NTd2LS4zMTNIMS4zNDR6Ii8+PC9zdmc+")
+    }
+
+    .IconButton__icon-blockquote___17VSX {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBkPSJNOS4zNDQgMTEuMzQ0bDEuMzEzLTIuNjg4aC0ydi00aDR2NGwtMS4zMTMgMi42ODhoLTJ6bS01LjM0NCAwbDEuMzQ0LTIuNjg4aC0ydi00aDR2NEw2IDExLjM0NEg0eiIvPjwvc3ZnPg==")
+    }
+
+    .IconButton__icon-bold___2zl9t {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBkPSJNOSAxMC4zNDRxLjQzOCAwIC43Mi0uMjk3dC4yOC0uNzAzLS4yOC0uNzAzVDkgOC4zNDVINi42NTZ2Mkg5em0tMi4zNDQtNnYyaDJxLjQwNiAwIC43MDMtLjI5N3QuMjk2LS43MDMtLjI5Ny0uNzAzLS43MDQtLjI5NmgtMnptMy43NSAyLjg0NHExLjQzOC42NTYgMS40MzggMi4yOCAwIDEuMDY0LS43MDMgMS43OThUOS4zNzYgMTJoLTQuNzJWMi42NTZoNC4xOXExLjEyNCAwIDEuODkuNzh0Ljc2NiAxLjkwNy0xLjA5MyAxLjg0NHoiLz48L3N2Zz4=")
+    }
+
+    .IconButton__icon-italic___2hHzc {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBkPSJNNi42NTYgMi42NTZIMTJ2MmgtMS44NzVMNy44NzUgMTBoMS40N3YySDR2LTJoMS44NzVsMi4yNS01LjM0NGgtMS40N3YtMnoiLz48L3N2Zz4=")
+    }
+
+    .IconButton__icon-underline___2EmZJ {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBkPSJNMy4zNDQgMTIuNjU2aDkuMzEzVjE0SDMuMzQ0di0xLjM0NHpNOCAxMS4zNDRxLTEuNjU2IDAtMi44MjgtMS4xNzJUNCA3LjM0NFYyaDEuNjU2djUuMzQ0cTAgLjk3LjY4OCAxLjY0VDggOS42NTh0MS42NTYtLjY3Mi42ODgtMS42NFYySDEydjUuMzQ0UTEyIDkgMTAuODI4IDEwLjE3MlQ4IDExLjM0NHoiLz48L3N2Zz4=")
+    }
+
+    .IconButton__icon-strikethrough___QtE2X {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjMuNTcgMTJxLjE5IDAgLjMxLjEydC4xMi4zMXYuODU2cTAgLjE4OC0uMTIuMzA4dC0uMzEuMTJILjQzcS0uMTg4IDAtLjMwOC0uMTJUMCAxMy4yODZ2LS44NTdxMC0uMTkuMTItLjMxVC40MjggMTJIMjMuNTd6bS0xNy4xLS44NTdxLS4zNzYtLjQ3LS42ODQtMS4wNy0uNjQzLTEuMy0uNjQzLTIuNTIgMC0yLjQyMyAxLjc5NS00LjEzNyAxLjc4LTEuNyA1LjI2My0xLjcuNjcgMCAyLjIzOC4yNTMuODg0LjE2IDIuMzcuNjQyLjEzNS41MS4yODIgMS41OC4xODggMS42NDcuMTg4IDIuNDUgMCAuMjQyLS4wNjcuNjA0bC0uMTYuMDQtMS4xMjUtLjA4LS4xODgtLjAyN3EtLjY3LTEuOTk3LTEuMzgtMi43NDctMS4xNzgtMS4yMi0yLjgxMi0xLjIyLTEuNTI3IDAtMi40MzguNzktLjg5Ny43NzgtLjg5NyAxLjk1NiAwIC45NzcuODg0IDEuODc0dDMuNzM3IDEuNzI4cS45MjUuMjY4IDIuMzE4Ljg4NC43NzcuMzc1IDEuMjcyLjY5Nkg2LjQ3em02Ljc5IDMuNDI4aDUuNTAzcS4wOTQuNTIzLjA5NCAxLjIzMyAwIDEuNDg3LS41NSAyLjg0LS4zMDcuNzM2LS45NSAxLjM5Mi0uNDk2LjQ3LTEuNDYgMS4wODUtMS4wNy42NDMtMi4wNS44ODQtMS4wNy4yOC0yLjcxOC4yOC0xLjUyOCAwLTIuNjEzLS4zMDdsLTEuODc1LS41MzZxLS43NjMtLjIxMy0uOTY0LS4zNzQtLjEwNy0uMTA3LS4xMDctLjI5NXYtLjE3M3EwLTEuNDQ2LS4wMjYtMi4wOS0uMDEzLS40IDAtLjkxbC4wMjctLjQ5NnYtLjU4OGwxLjM2Ny0uMDI3cS4yLjQ1NS40MDIuOTV0LjMuNzUuMTY3LjM2M3EuNDcuNzYzIDEuMDcgMS4yNi41NzcuNDggMS40MDcuNzYyLjc5LjI5NSAxLjc2OC4yOTUuODU3IDAgMS44NjItLjM2MiAxLjAzLS4zNDggMS42MzQtMS4xNTIuNjMtLjgxNi42My0xLjcyNyAwLTEuMTI1LTEuMDg2LTIuMTAzLS40NTUtLjM4OC0xLjgzNS0uOTV6Ii8+PC9zdmc+");
+      background-size: 14px
+    }
+
+    .IconButton__icon-code___3F1pe {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTE2IDExNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEuNDE0Ij48ZyBmaWxsLXJ1bGU9Im5vbnplcm8iPjxwYXRoIGQ9Ik0yMi40NjQgMjguNDhjMCAyLjg5NS4zNDQgNS45MDUuODA2IDkuMDIuMzQyIDMuMDEuNjkgNi4wMi42OSA4LjkxNyAwIDMuNTYyLS45MTcgNy43OS04Ljk1NSA3LjkxMnY3LjIzNmM4LjAzNi4xMTUgOC45NTYgNC42NzIgOC45NTYgNy45MTIgMCAyLjg4Ni0uMzQ4IDUuNzgzLS42OSA4Ljc4Ny0uNDYyIDMuMDEzLS44MDYgNi4xMzQtLjgwNiA4LjkyIDAgMTEuMjM4IDcuMTA2IDE1LjI1MiAxNy4wODcgMTUuMjUyaDMuMzJ2LTcuOTEyaC0yLjA2MmMtNS43MjYgMC04LjAyNS0zLjIzMy04LjAyNS04Ljc5NiAwLTIuMjM2LjM0NC00LjU3LjgwNi03LjAyMy4yMjctMi40MzguNjg0LTUuMTIuNjg0LTguMTIuMTE1LTcuNzkyLTMuMzItMTEuMjUzLTkuMTc0LTEyLjU4NnYtLjIyNWM1Ljg1NC0xLjMzMiA5LjI5My00LjY3NiA5LjE3LTEyLjQ3IDAtMi44OTUtLjQ1Ny01LjU2NS0uNjg0LTguMDI0LS40NjItMi40NC0uODA3LTQuNzc3LS44MDctNy4wMTIgMC01LjQ1IDIuMDU4LTguNjg4IDguMDI0LTguNjg4aDIuMDY2di04LjAxNGgtMy4zMmMtMTAuMjA1LS4wMDMtMTcuMDg2IDQuNDQ0LTE3LjA4NiAxNC45MTV6TTkyLjA2IDQ2LjQxN2MwLTIuODkzLjQ1My01LjkwMy44MDMtOC45MTguMzQzLTMuMTE0Ljc5Ny02LjEyLjc5Ny05LjAyIDAtMTAuNDctNi44NzUtMTQuOTE3LTE3LjA4LTE0LjkxN2gtMy4zMjd2OC4wMTdoMi4wNmM1Ljg1Mi4xMTQgNy45MSAzLjIzMyA3LjkxIDguNjg4IDAgMi4yMy0uMzQyIDQuNTY1LS42ODUgNy4wMTItLjM1IDIuNDU1LS42OTIgNS4xMjYtLjY5MiA4LjAyNC0uMTA1IDcuNzk3IDMuMzI3IDExLjEzNiA5LjA1NiAxMi40N3YuMjIyYy01LjcyIDEuMzMzLTkuMTYgNC43OTYtOS4wNTYgMTIuNTg3IDAgMyAuMzQyIDUuNjg2LjY5MiA4LjEyLjM0MyAyLjQ1NS42ODYgNC43OS42ODYgNy4wMjUgMCA1LjU1NC0yLjE4IDguNjgtNy45MTIgOC43ODhoLTIuMDZ2Ny45MTJoMy4zMjVjOS45NzUgMCAxNy4wNzYtNC4wMSAxNy4wNzYtMTUuMjUgMC0yLjc4My0uNDU0LTUuOS0uNzk2LTguOTE0LS4zNDctMy4wMS0uODA1LTUuOS0uODA1LTguNzk1IDAtMy4yMzMgMS4wMzUtNy43OSA4Ljk0My03LjkxM1Y1NC4zMmMtNy45MDQtLjExMi04LjkzNS00LjM0LTguOTM1LTcuOTAzeiIvPjwvZz48L3N2Zz4=")
+    }
+
+    .IconButton__icon-link___2umEl {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMiIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDIyIDI0Ij48cGF0aCBkPSJNMTkuNSAxNi4yODZxMC0uNTM2LS4zNzUtLjkxbC0yLjc4Ni0yLjc4N3EtLjM3Ni0uMzc2LS45MTItLjM3Ni0uNTYzIDAtLjk2NC40M2wuMjU0LjI0N3EuMjE0LjIwOC4yODguMjl0LjIuMjUzLjE3NS4zNDIuMDQ4LjM2OHEwIC41MzYtLjM3NS45MXQtLjkxLjM3NnEtLjIwMiAwLS4zNy0uMDQ4dC0uMzQtLjE3NC0uMjU1LS4yLS4yODgtLjI5LS4yNDgtLjI1M3EtLjQ0Mi40MTUtLjQ0Mi45NzggMCAuNTM2LjM3NS45MWwyLjc2IDIuNzczcS4zNi4zNjIuOTEuMzYyLjUzNiAwIC45MS0uMzQ4bDEuOTctMS45NTVxLjM3NS0uMzc1LjM3NS0uODk3em0tOS40MTUtOS40NDJxMC0uNTM2LS4zNzUtLjkxTDYuOTUgMy4xNnEtLjM3NC0uMzc0LS45MS0uMzc0LS41MjIgMC0uOTEuMzYyTDMuMTYgNS4xMDNxLS4zNzUuMzc1LS4zNzUuODk3IDAgLjUzNi4zNzUuOTFsMi43ODYgMi43ODdxLjM2Mi4zNjIuOTEuMzYyLjU2NCAwIC45NjUtLjQxNmwtLjI1My0uMjQ4cS0uMjEzLS4yMDgtLjI4OC0uMjg4dC0uMjAyLS4yNTQtLjE3NC0uMzQyLS4wNDctLjM2OHEwLS41MzYuMzc1LS45MXQuOTEtLjM3NnEuMjAyIDAgLjM3LjA0N3QuMzQuMTc0LjI1NS4yLjI4OC4yODguMjQ4LjI1NHEuNDQyLS40MTUuNDQyLS45Nzh6bTExLjk4NiA5LjQ0MnEwIDEuNjA3LTEuMTM3IDIuNzJsLTEuOTcgMS45NTRxLTEuMTEgMS4xMTItMi43MTggMS4xMTItMS42MiAwLTIuNzMyLTEuMTM4bC0yLjc2LTIuNzcycS0xLjExLTEuMTEyLTEuMTEtMi43MiAwLTEuNjQ2IDEuMTc4LTIuNzk4bC0xLjE3OC0xLjE4cS0xLjE1MiAxLjE4LTIuNzg2IDEuMTgtMS42MDcgMC0yLjczMi0xLjEyNUwxLjMzOCA4LjczMlEuMjEzIDcuNjA4LjIxMyA2VDEuMzUgMy4yODNsMS45Ny0xLjk1NVE0LjQzMi4yMTUgNi4wNC4yMTVxMS42MiAwIDIuNzMgMS4xMzhsMi43NiAyLjc3MnExLjExMiAxLjExMiAxLjExMiAyLjcyIDAgMS42NDYtMS4xOCAyLjc5OGwxLjE4IDEuMThxMS4xNTItMS4xOCAyLjc4Ni0xLjE4IDEuNjA3IDAgMi43MzIgMS4xMjVsMi43ODYgMi43ODZxMS4xMjUgMS4xMjUgMS4xMjUgMi43MzJ6Ii8+PC9zdmc+");
+      background-size: 14px
+    }
+
+    .IconButton__icon-remove-link___j61pw {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMiIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDIyIDI0Ij48cGF0aCBkPSJNNS44OCAxNy4wMjJsLTMuNDMgMy40M3EtLjEzNC4xMi0uMzA4LjEyLS4xNiAwLS4zMDgtLjEyLS4xMi0uMTM1LS4xMi0uMzF0LjEyLS4zMDdsMy40My0zLjQzcS4xMzMtLjEyLjMwNy0uMTJ0LjMxLjEycS4xMi4xMzUuMTIuMzF0LS4xMi4zMDd6bTIuMjYzLjU1djQuMjg1cTAgLjE4OC0uMTIuMzA4dC0uMzEuMTItLjMwNy0uMTItLjEyLS4zMDhWMTcuNTdxMC0uMTg3LjEyLS4zMDd0LjMwOC0uMTIuMzA4LjEyLjEyLjMwOHptLTMtM3EwIC4xODctLjEyLjMwN3QtLjMxLjEySC40M3EtLjE4OCAwLS4zMDgtLjEyVDAgMTQuNTd0LjEyLS4zMDcuMzA4LS4xMmg0LjI4NnEuMTg4IDAgLjMwOC4xMnQuMTIuMzA4em0xNi45MjggMS43MTRxMCAxLjYwNy0xLjEzNyAyLjcybC0xLjk3IDEuOTU0cS0xLjExIDEuMTEyLTIuNzE4IDEuMTEyLTEuNjIgMC0yLjczMi0xLjEzOEw5LjA0IDE2LjQ0N3EtLjI4LS4yOC0uNTYzLS43NWwzLjItLjI0IDMuNjU3IDMuNjdxLjM2Mi4zNi45MS4zNjd0LjkxMi0uMzU1bDEuOTctMS45NTZxLjM3NC0uMzc1LjM3NC0uODk3IDAtLjUzNi0uMzc1LS45MWwtMy42Ny0zLjY4NC4yNC0zLjJxLjQ3LjI4Ljc1LjU2Mmw0LjUgNC41cTEuMTI2IDEuMTUyIDEuMTI2IDIuNzMyek0xMy44MSA2LjU5bC0zLjIuMjRMNi45NSAzLjE2cS0uMzc0LS4zNzUtLjkxLS4zNzUtLjUyMiAwLS45MS4zNjJMMy4xNiA1LjEwMnEtLjM3NS4zNzUtLjM3NS44OTcgMCAuNTM1LjM3NS45MWwzLjY3IDMuNjctLjI0IDMuMjE0cS0uNDctLjI4LS43NS0uNTYzbC00LjUtNC41US4yMTMgNy41OC4yMTMgNnEwLTEuNjA4IDEuMTM4LTIuNzJsMS45Ny0xLjk1NVE0LjQzLjIxMyA2LjA0LjIxM3ExLjYyIDAgMi43MzIgMS4xMzhsNC40NzMgNC40ODhxLjI4LjI4LjU2My43NXptOC40NzggMS4xMjRxMCAuMTg4LS4xMi4zMDh0LS4zMS4xMmgtNC4yODVxLS4xODcgMC0uMzA3LS4xMnQtLjEyLS4zMDguMTItLjMwOC4zMDgtLjEyaDQuMjg3cS4xODggMCAuMzA4LjEydC4xMi4zMDh6TTE1IC40M3Y0LjI4NXEwIC4xODgtLjEyLjMwOHQtLjMxLjEyLS4zMDctLjEyLS4xMi0uMzA4Vi40M3EwLS4xOS4xMi0uMzFUMTQuNTcgMHQuMzEuMTIuMTIuMzF6bTUuNDUgMi4wMmwtMy40MjggMy40M3EtLjE0Ny4xMi0uMzA4LjEydC0uMzA4LS4xMnEtLjEyLS4xMzQtLjEyLS4zMDh0LjEyLS4zMDhsMy40My0zLjQzcS4xMzMtLjEyLjMwNy0uMTJ0LjMwOC4xMnEuMTIyLjEzNS4xMjIuMzF0LS4xMi4zMDd6Ii8+PC9zdmc+");
+      background-size: 14px
+    }
+
+    .IconButton__icon-cancel___fx4TT {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjMuNzggMTkuMjhMMTYuNSAxMmw3LjI4LTcuMjhhLjc0OC43NDggMCAwIDAgMC0xLjA2TDIwLjM0LjIxOGEuNzUuNzUgMCAwIDAtMS4wNi0uMDAyTDEyIDcuNDk4IDQuNzE3LjIyYS43NDguNzQ4IDAgMCAwLTEuMDYgMEwuMjE3IDMuNjZhLjc1Ljc1IDAgMCAwIDAgMS4wNkw3LjQ5NyAxMmwtNy4yOCA3LjI4YS43NDguNzQ4IDAgMCAwIDAgMS4wNmwzLjQ0IDMuNDRhLjc1Ljc1IDAgMCAwIDEuMDYuMDAybDcuMjgtNy4yOCA3LjI4MiA3LjI4Yy4wNzguMDc4LjE3LjEzNS4yNjguMTcuMjY3LjEuNTguMDQ0Ljc5My0uMTdsMy40NC0zLjQ0YS43NS43NSAwIDAgMCAwLTEuMDZ6Ii8+PC9zdmc+");
+      background-size: 13px
+    }
+
+    .IconButton__icon-accept___2D6M9 {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjAuMjUgM0w5IDE0LjI1IDMuNzUgOSAwIDEyLjc1bDkgOSAxNS0xNXoiLz48L3N2Zz4=");
+      background-size: 13px
+    }
+  </style>
+  <style type="text/css">
+    .ButtonGroup__root___3lEAn {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 5px 5px 0;
+      white-space: nowrap
+    }
+
+    .ButtonGroup__root___3lEAn:last-child {
+      margin-right: 0
+    }
+
+    .ButtonGroup__root___3lEAn>div>button {
+      margin-right: 0;
+      border-radius: 0
+    }
+
+    .ButtonGroup__root___3lEAn>div>button:focus {
+      position: relative;
+      z-index: 1
+    }
+
+    .ButtonGroup__root___3lEAn>div:first-child>button {
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px
+    }
+
+    .ButtonGroup__root___3lEAn>div+div>button {
+      border-left-width: 0
+    }
+
+    .ButtonGroup__root___3lEAn>div:last-child>button {
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px
+    }
+  </style>
+  <style type="text/css">
+    .InputPopover__root___3Hpj9 {
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 0;
+      width: 260px;
+      background: none #fdfdfd;
+      background: linear-gradient(180deg, #fdfdfd 0, #f6f7f8);
+      border: 1px solid #999;
+      border-radius: 2px;
+      box-sizing: border-box;
+      padding: 4px
+    }
+
+    .InputPopover__root___3Hpj9:before {
+      top: -10px;
+      border: 5px solid transparent;
+      border-bottom-color: #999
+    }
+
+    .InputPopover__root___3Hpj9:after,
+    .InputPopover__root___3Hpj9:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 10px
+    }
+
+    .InputPopover__root___3Hpj9:after {
+      top: -9px;
+      border: 5px solid transparent;
+      border-bottom-color: #fdfdfd
+    }
+
+    .InputPopover__inner___32V5P {
+      display: flex
+    }
+
+    .InputPopover__input___264Za {
+      display: block;
+      flex: 1 0 auto;
+      height: 30px;
+      background: none #fff;
+      border: 1px solid #999;
+      border-radius: 2px;
+      box-sizing: border-box;
+      padding: 2px 6px;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: 24px
+    }
+
+    .InputPopover__inner___32V5P .InputPopover__buttonGroup___2c3Sl {
+      flex: 0 1 auto;
+      margin-left: 4px;
+      margin-bottom: 0
+    }
+  </style>
+  <style type="text/css">
+    .Dropdown__root___3ALmx {
+      display: inline-block;
+      position: relative;
+      line-height: 22px;
+      vertical-align: top;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none
+    }
+
+    .Dropdown__root___3ALmx select {
+      position: relative;
+      z-index: 2;
+      display: inline-block;
+      box-sizing: border-box;
+      height: 30px;
+      line-height: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      margin: 0;
+      padding: 0;
+      border: 4px solid transparent;
+      border-right-width: 10px;
+      border-left-width: 5px;
+      background: none transparent;
+      opacity: 0;
+      cursor: pointer
+    }
+
+    .Dropdown__root___3ALmx .Dropdown__value___34Py9 {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      line-height: 23px;
+      border: 1px solid #999;
+      border-radius: 2px;
+      padding: 3px;
+      padding-right: 33px;
+      padding-left: 12px;
+      white-space: nowrap;
+      text-overflow: ellipsis
+    }
+
+    .Dropdown__root___3ALmx .Dropdown__value___34Py9:after,
+    .Dropdown__root___3ALmx .Dropdown__value___34Py9:before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      width: 0;
+      height: 0;
+      border: 4px solid transparent
+    }
+
+    .Dropdown__root___3ALmx .Dropdown__value___34Py9:before {
+      margin-top: -10px;
+      border-bottom-color: #555
+    }
+
+    .Dropdown__root___3ALmx .Dropdown__value___34Py9:after {
+      margin-top: 1px;
+      border-top-color: #555
+    }
+
+    .Dropdown__root___3ALmx select:focus+.Dropdown__value___34Py9 {
+      border-color: #66afe9
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+      .Dropdown__root___3ALmx select {
+        opacity: 1;
+        color: inherit;
+        -webkit-appearance: none;
+        border-left-width: 12px;
+        border-right-width: 35px
+      }
+
+      .Dropdown__root___3ALmx select+.Dropdown__value___34Py9 {
+        color: transparent
+      }
+
+      .Dropdown__root___3ALmx select:focus+.Dropdown__value___34Py9 {
+        border-color: #999
+      }
+    }
+  </style>
+  <style type="text/css">
+    .EditorToolbar__root___3_Aqz {
+      font-family: Helvetica, sans-serif;
+      font-size: 14px;
+      margin: 0 10px;
+      padding: 10px 0 5px;
+      border-bottom: 1px solid #ddd;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none
+    }
+  </style>
+  <style type="text/css">
+    /**
+ * We inherit the height of the container by default
+ */
+
+    .DraftEditor-root,
+    .DraftEditor-editorContainer,
+    .public-DraftEditor-content {
+      height: inherit;
+      text-align: initial;
+    }
+
+    .DraftEditor-root {
+      position: relative;
+    }
+
+    /**
+ * Zero-opacity background used to allow focus in IE. Otherwise, clicks
+ * fall through to the placeholder.
+ */
+
+    .DraftEditor-editorContainer {
+      background-color: rgba(255, 255, 255, 0);
+      /* Repair mysterious missing Safari cursor */
+      border: 1px solid transparent;
+      position: relative;
+      z-index: 1;
+    }
+
+    .public-DraftEditor-content {
+      outline: none;
+      white-space: pre-wrap;
+    }
+
+    .public-DraftEditor-block {
+      position: relative;
+    }
+
+    .DraftEditor-alignLeft .public-DraftEditor-block {
+      text-align: left;
+    }
+
+    .DraftEditor-alignLeft .public-DraftEditorPlaceholder-root {
+      left: 0;
+      text-align: left;
+    }
+
+    .DraftEditor-alignCenter .public-DraftEditor-block {
+      text-align: center;
+    }
+
+    .DraftEditor-alignCenter .public-DraftEditorPlaceholder-root {
+      margin: 0 auto;
+      text-align: center;
+      width: 100%;
+    }
+
+    .DraftEditor-alignRight .public-DraftEditor-block {
+      text-align: right;
+    }
+
+    .DraftEditor-alignRight .public-DraftEditorPlaceholder-root {
+      right: 0;
+      text-align: right;
+    }
+
+    /**
+ * @providesModule DraftEditorPlaceholder
+ */
+
+    .public-DraftEditorPlaceholder-root {
+      color: #9197a3;
+      position: absolute;
+      z-index: 0;
+    }
+
+    .public-DraftEditorPlaceholder-hasFocus {
+      color: #bdc1c9;
+    }
+
+    .DraftEditorPlaceholder-hidden {
+      display: none;
+    }
+
+    /**
+ * @providesModule DraftStyleDefault
+ */
+
+    .public-DraftStyleDefault-block {
+      position: relative;
+      white-space: pre-wrap;
+    }
+
+    /* @noflip */
+
+    .public-DraftStyleDefault-ltr {
+      direction: ltr;
+      text-align: left;
+    }
+
+    /* @noflip */
+
+    .public-DraftStyleDefault-rtl {
+      direction: rtl;
+      text-align: right;
+    }
+
+    /**
+ * These rules provide appropriate text direction for counter pseudo-elements.
+ */
+
+    /* @noflip */
+
+    .public-DraftStyleDefault-listLTR {
+      direction: ltr;
+    }
+
+    /* @noflip */
+
+    .public-DraftStyleDefault-listRTL {
+      direction: rtl;
+    }
+
+    /**
+ * Default spacing for list container elements. Override with CSS as needed.
+ */
+
+    .public-DraftStyleDefault-ul,
+    .public-DraftStyleDefault-ol {
+      margin: 16px 0;
+      padding: 0;
+    }
+
+    /**
+ * Default counters and styles are provided for five levels of nesting.
+ * If you require nesting beyond that level, you should use your own CSS
+ * classes to do so. If you care about handling RTL languages, the rules you
+ * create should look a lot like these.
+ */
+
+    /* @noflip */
+
+    .public-DraftStyleDefault-depth0.public-DraftStyleDefault-listLTR {
+      margin-left: 1.5em;
+    }
+
+    /* @noflip */
+
+    .public-DraftStyleDefault-depth0.public-DraftStyleDefault-listRTL {
+      margin-right: 1.5em;
+    }
+
+    /* @noflip */
+
+    .public-DraftStyleDefault-depth1.public-DraftStyleDefault-listLTR {
+      margin-left: 3em;
+    }
+
+    /* @noflip */
+
+    .public-DraftStyleDefault-depth1.public-DraftStyleDefault-listRTL {
+      margin-right: 3em;
+    }
+
+    /* @noflip */
+
+    .public-DraftStyleDefault-depth2.public-DraftStyleDefault-listLTR {
+      margin-left: 4.5em;
+    }
+
+    /* @noflip */
+
+    .public-DraftStyleDefault-depth2.public-DraftStyleDefault-listRTL {
+      margin-right: 4.5em;
+    }
+
+    /* @noflip */
+
+    .public-DraftStyleDefault-depth3.public-DraftStyleDefault-listLTR {
+      margin-left: 6em;
+    }
+
+    /* @noflip */
+
+    .public-DraftStyleDefault-depth3.public-DraftStyleDefault-listRTL {
+      margin-right: 6em;
+    }
+
+    /* @noflip */
+
+    .public-DraftStyleDefault-depth4.public-DraftStyleDefault-listLTR {
+      margin-left: 7.5em;
+    }
+
+    /* @noflip */
+
+    .public-DraftStyleDefault-depth4.public-DraftStyleDefault-listRTL {
+      margin-right: 7.5em;
+    }
+
+    /**
+ * Only use `square` list-style after the first two levels.
+ */
+
+    .public-DraftStyleDefault-unorderedListItem {
+      list-style-type: square;
+      position: relative;
+    }
+
+    .public-DraftStyleDefault-unorderedListItem.public-DraftStyleDefault-depth0 {
+      list-style-type: disc;
+    }
+
+    .public-DraftStyleDefault-unorderedListItem.public-DraftStyleDefault-depth1 {
+      list-style-type: circle;
+    }
+
+    /**
+ * Ordered list item counters are managed with CSS, since all list nesting is
+ * purely visual.
+ */
+
+    .public-DraftStyleDefault-orderedListItem {
+      list-style-type: none;
+      position: relative;
+    }
+
+    /* @noflip */
+
+    .public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-listLTR:before {
+      left: -36px;
+      position: absolute;
+      text-align: right;
+      width: 30px;
+    }
+
+    /* @noflip */
+
+    .public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-listRTL:before {
+      position: absolute;
+      right: -36px;
+      text-align: left;
+      width: 30px;
+    }
+
+    /**
+ * Counters are reset in JavaScript. If you need different counter styles,
+ * override these rules. If you need more nesting, create your own rules to
+ * do so.
+ */
+
+    .public-DraftStyleDefault-orderedListItem:before {
+      content: counter(ol0) ". ";
+      counter-increment: ol0;
+    }
+
+    .public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth1:before {
+      content: counter(ol1) ". ";
+      counter-increment: ol1;
+    }
+
+    .public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth2:before {
+      content: counter(ol2) ". ";
+      counter-increment: ol2;
+    }
+
+    .public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth3:before {
+      content: counter(ol3) ". ";
+      counter-increment: ol3;
+    }
+
+    .public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth4:before {
+      content: counter(ol4) ". ";
+      counter-increment: ol4;
+    }
+
+    .public-DraftStyleDefault-depth0.public-DraftStyleDefault-reset {
+      counter-reset: ol0;
+    }
+
+    .public-DraftStyleDefault-depth1.public-DraftStyleDefault-reset {
+      counter-reset: ol1;
+    }
+
+    .public-DraftStyleDefault-depth2.public-DraftStyleDefault-reset {
+      counter-reset: ol2;
+    }
+
+    .public-DraftStyleDefault-depth3.public-DraftStyleDefault-reset {
+      counter-reset: ol3;
+    }
+
+    .public-DraftStyleDefault-depth4.public-DraftStyleDefault-reset {
+      counter-reset: ol4;
+    }
+  </style>
+
+  <style type="text/css">
+    .RichTextEditor__root___2QXK- {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      font-family: Georgia, serif;
+      font-size: 14px
+    }
+
+    .RichTextEditor__editor___1QqIU {
+      cursor: text;
+      font-size: 16px
+    }
+
+    .RichTextEditor__editor___1QqIU .public-DraftEditor-content,
+    .RichTextEditor__editor___1QqIU .public-DraftEditorPlaceholder-root {
+      margin: 0;
+      padding: 9px
+    }
+
+    .RichTextEditor__editor___1QqIU .public-DraftEditor-content {
+      overflow: auto
+    }
+
+    .RichTextEditor__hidePlaceholder___3WLid .public-DraftEditorPlaceholder-root {
+      display: none
+    }
+
+    .RichTextEditor__editor___1QqIU .RichTextEditor__paragraph___3NTf9,
+    .RichTextEditor__editor___1QqIU pre {
+      margin: 14px 0
+    }
+
+    .RichTextEditor__editor___1QqIU .RichTextEditor__codeBlock____KD4Q {
+      background-color: #f3f3f3;
+      font-family: Inconsolata, Menlo, Consolas, monospace;
+      font-size: 16px;
+      margin: 14px 0;
+      padding: 20px
+    }
+
+    .RichTextEditor__editor___1QqIU .RichTextEditor__codeBlock____KD4Q span[style] {
+      padding: 0 !important
+    }
+
+    .RichTextEditor__editor___1QqIU .RichTextEditor__blockquote___1vCYl {
+      border-left: 5px solid #eee;
+      color: #666;
+      font-family: Hoefler Text, Georgia, serif;
+      font-style: italic;
+      margin: 16px 0;
+      padding: 10px 20px
+    }
+
+    .RichTextEditor__editor___1QqIU .RichTextEditor__block___2Vs_D:first-child,
+    .RichTextEditor__editor___1QqIU ol:first-child,
+    .RichTextEditor__editor___1QqIU pre:first-child,
+    .RichTextEditor__editor___1QqIU ul:first-child {
+      margin-top: 0
+    }
+
+    .RichTextEditor__editor___1QqIU .RichTextEditor__block___2Vs_D:last-child,
+    .RichTextEditor__editor___1QqIU ol:last-child,
+    .RichTextEditor__editor___1QqIU pre:last-child,
+    .RichTextEditor__editor___1QqIU ul:last-child {
+      margin-bottom: 0
+    }
+  </style>
+  <style type="text/css" data-fbcssmodules="css:fb.css.basecss:fb.css.dialog css:fb.css.iframewidget">
+    .fb_hidden {
+      position: absolute;
+      top: -10000px;
+      z-index: 10001
+    }
+
+    .fb_reposition {
+      overflow: hidden;
+      position: relative
+    }
+
+    .fb_invisible {
+      display: none
+    }
+
+    .fb_reset {
+      background: none;
+      border: 0;
+      border-spacing: 0;
+      color: #000;
+      cursor: auto;
+      direction: ltr;
+      font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+      font-size: 11px;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: normal;
+      letter-spacing: normal;
+      line-height: 1;
+      margin: 0;
+      overflow: visible;
+      padding: 0;
+      text-align: left;
+      text-decoration: none;
+      text-indent: 0;
+      text-shadow: none;
+      text-transform: none;
+      visibility: visible;
+      white-space: normal;
+      word-spacing: normal
+    }
+
+    .fb_reset>div {
+      overflow: hidden
+    }
+
+    @keyframes fb_transform {
+      from {
+        opacity: 0;
+        transform: scale(.95)
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1)
+      }
+    }
+
+    .fb_animate {
+      animation: fb_transform .3s forwards
+    }
+
+    .fb_dialog {
+      background: rgba(82, 82, 82, .7);
+      position: absolute;
+      top: -10000px;
+      z-index: 10001
+    }
+
+    .fb_dialog_advanced {
+      border-radius: 8px;
+      padding: 10px
+    }
+
+    .fb_dialog_content {
+      background: #fff;
+      color: #373737
+    }
+
+    .fb_dialog_close_icon {
+      background: url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;
+      cursor: pointer;
+      display: block;
+      height: 15px;
+      position: absolute;
+      right: 18px;
+      top: 17px;
+      width: 15px
+    }
+
+    .fb_dialog_mobile .fb_dialog_close_icon {
+      left: 5px;
+      right: auto;
+      top: 5px
+    }
+
+    .fb_dialog_padding {
+      background-color: transparent;
+      position: absolute;
+      width: 1px;
+      z-index: -1
+    }
+
+    .fb_dialog_close_icon:hover {
+      background: url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent
+    }
+
+    .fb_dialog_close_icon:active {
+      background: url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent
+    }
+
+    .fb_dialog_iframe {
+      line-height: 0
+    }
+
+    .fb_dialog_content .dialog_title {
+      background: #6d84b4;
+      border: 1px solid #365899;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0
+    }
+
+    .fb_dialog_content .dialog_title>span {
+      background: url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;
+      float: left;
+      padding: 5px 0 7px 26px
+    }
+
+    body.fb_hidden {
+      height: 100%;
+      left: 0;
+      margin: 0;
+      overflow: visible;
+      position: absolute;
+      top: -10000px;
+      transform: none;
+      width: 100%
+    }
+
+    .fb_dialog.fb_dialog_mobile.loading {
+      background: url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;
+      min-height: 100%;
+      min-width: 100%;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      z-index: 10001
+    }
+
+    .fb_dialog.fb_dialog_mobile.loading.centered {
+      background: none;
+      height: auto;
+      min-height: initial;
+      min-width: initial;
+      width: auto
+    }
+
+    .fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {
+      width: 100%
+    }
+
+    .fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {
+      background: none
+    }
+
+    .loading.centered #fb_dialog_loader_close {
+      clear: both;
+      color: #fff;
+      display: block;
+      font-size: 18px;
+      padding-top: 20px
+    }
+
+    #fb-root #fb_dialog_ipad_overlay {
+      background: rgba(0, 0, 0, .4);
+      bottom: 0;
+      left: 0;
+      min-height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 10000
+    }
+
+    #fb-root #fb_dialog_ipad_overlay.hidden {
+      display: none
+    }
+
+    .fb_dialog.fb_dialog_mobile.loading iframe {
+      visibility: hidden
+    }
+
+    .fb_dialog_mobile .fb_dialog_iframe {
+      position: sticky;
+      top: 0
+    }
+
+    .fb_dialog_content .dialog_header {
+      background: linear-gradient(from(#738aba), to(#2c4987));
+      border-bottom: 1px solid;
+      border-color: #043b87;
+      box-shadow: white 0 1px 1px -1px inset;
+      color: #fff;
+      font: bold 14px Helvetica, sans-serif;
+      text-overflow: ellipsis;
+      text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0;
+      vertical-align: middle;
+      white-space: nowrap
+    }
+
+    .fb_dialog_content .dialog_header table {
+      height: 43px;
+      width: 100%
+    }
+
+    .fb_dialog_content .dialog_header td.header_left {
+      font-size: 12px;
+      padding-left: 5px;
+      vertical-align: middle;
+      width: 60px
+    }
+
+    .fb_dialog_content .dialog_header td.header_right {
+      font-size: 12px;
+      padding-right: 5px;
+      vertical-align: middle;
+      width: 60px
+    }
+
+    .fb_dialog_content .touchable_button {
+      background: linear-gradient(from(#4267B2), to(#2a4887));
+      background-clip: padding-box;
+      border: 1px solid #29487d;
+      border-radius: 3px;
+      display: inline-block;
+      line-height: 18px;
+      margin-top: 3px;
+      max-width: 85px;
+      padding: 4px 12px;
+      position: relative
+    }
+
+    .fb_dialog_content .dialog_header .touchable_button input {
+      background: none;
+      border: none;
+      color: #fff;
+      font: bold 12px Helvetica, sans-serif;
+      margin: 2px -12px;
+      padding: 2px 6px 3px 6px;
+      text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+    }
+
+    .fb_dialog_content .dialog_header .header_center {
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 18px;
+      text-align: center;
+      vertical-align: middle
+    }
+
+    .fb_dialog_content .dialog_content {
+      background: url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;
+      border: 1px solid #4a4a4a;
+      border-bottom: 0;
+      border-top: 0;
+      height: 150px
+    }
+
+    .fb_dialog_content .dialog_footer {
+      background: #f5f6f7;
+      border: 1px solid #4a4a4a;
+      border-top-color: #ccc;
+      height: 40px
+    }
+
+    #fb_dialog_loader_close {
+      float: left
+    }
+
+    .fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {
+      visibility: hidden
+    }
+
+    #fb_dialog_loader_spinner {
+      animation: rotateSpinner 1.2s linear infinite;
+      background-color: transparent;
+      background-image: url(https://z-p3-static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      height: 24px;
+      width: 24px
+    }
+
+    @keyframes rotateSpinner {
+      0% {
+        transform: rotate(0deg)
+      }
+
+      100% {
+        transform: rotate(360deg)
+      }
+    }
+
+    .fb_iframe_widget {
+      display: inline-block;
+      position: relative
+    }
+
+    .fb_iframe_widget span {
+      display: inline-block;
+      position: relative;
+      text-align: justify
+    }
+
+    .fb_iframe_widget iframe {
+      position: absolute
+    }
+
+    .fb_iframe_widget_fluid_desktop,
+    .fb_iframe_widget_fluid_desktop span,
+    .fb_iframe_widget_fluid_desktop iframe {
+      max-width: 100%
+    }
+
+    .fb_iframe_widget_fluid_desktop iframe {
+      min-width: 220px;
+      position: relative
+    }
+
+    .fb_iframe_widget_lift {
+      z-index: 1
+    }
+
+    .fb_iframe_widget_fluid {
+      display: inline
+    }
+
+    .fb_iframe_widget_fluid span {
+      width: 100%
+    }
+  </style>
+  <link rel="stylesheet" href="{%static 'css/Basic_trip/main.css'%}">
+</head>
+
+<body style="overflow: auto;" class="">
+  <div id="__next">
+
+
+    <div class="topmenu">
+      <div id="header-sticky" class="topmenu__wrapper topmenu__wrapper--sticky">
+        <div class="topmenu__staticblock "><a class="topmenu__logo ">
+
+
+            <img src="{%static 'pic/ourlogo.png'%}" alt="chalchliye logo"
+              class="myImage">
+
+
+
+
+          </a><a type="button" class="topmenu__toggler "><span class="icon-bar"></span><span
+              class="icon-bar"></span><span class="icon-bar"></span></a>
+          <div class="clearfix"></div>
+        </div>
+        <div class="topmenu__togglepart  " id="travel-collapse">
+          <div>
+            <ul class="topmenu__menuwrapper  topmenu__menuwrapper--right hidden--md hidden--lg">
+              <li class="topmenu__li"><a class="topmenu__menu"  href="#">Ho It Works</li>
+              <li class="topmenu__li"><a class="topmenu__menu" href="{%url 'MyTrips'%}">My Trips</a></li>
+              <li class="topmenu__li"><a class="topmenu__menu" href="#">Profile</a></li>
+            </ul>
+            <ul class="topmenu__menuwrapper  topmenu__menuwrapper--right hidden--sm hidden--xs"></ul>
+            <ul class="topmenu__menuwrapper topmenu__menuwrapper--right hidden--xs hidden--sm">
+              <li class="topmenu__li">
+                <div class="help-popup"><a class="topmenu__menu topmenu__menu--profile"><span></span>
+                    <div class="avatar__container topmenu__profile">
+                      <div class="avatar avatar--small">{{user}}</div>
+                    </div>
+                  </a>
+                  <div class="callout contextmenu--arrow contextmenu__callout">
+                    <div class="contextmenu__content"><a class="contextmenu__link" href="{%url 'MyTrips'%}">My Trips
+                        <hr class="contextmenu__hr">
+                      </a><a class="contextmenu__link" href="#">Profile
+                        <hr class="contextmenu__hr">
+                      </a><a class="contextmenu__link" rel="nofollow" href="{%url 'SignOut'%}">Sign Out</a></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <ul
+              class="topmenu__menuwrapper  topmenu__menuwrapper--bottom topmenu__menuwrapper--right hidden--md hidden--lg">
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+
+
+
+
+
+    <div></div>
+
+<form class="trip-basics" method="POST" action="{%url 'Basics' %}">
+      {% csrf_token %}
+    <div>
+      <div class="builder-form-layout">
+
+        <div class="builder-form-layout2"></div>
+
+
+        <div class="wt-container">
+          <div class="wt-row">
+
+            <aside class="wt-col-lg-2 wt-col-md-3 wt-col-sm-3 wt-col-xs-12 builder-form-layout__sticky">
+              <div class="builder-form-layout__left-sidebar" style="width: 184.156px;">
+                <div class="builder-navigation-container">
+                  <div>
+                    <div class="builder-navigation-container__collapser"></div>
+                    <div class="builder-navigation-trigger">
+                      <div class="builder-navigation-trigger__number">1</div>
+                      <div class="builder-navigation-trigger__title">Trip Basics</div>
+                    </div>
+                  </div>
+                  <ol class="builder-navigation">
+                    <li class="builder-navigation__item builder-navigation__item--active"><a
+                        class="builder-navigation__link" href="{%url 'Description'%}"><span> Trip Basics </span></a></li>
+                    <li class="builder-navigation__item"><a class="builder-navigation__link" href="#"><span> Trip
+                          Description </span></a></li>
+                    <li class="builder-navigation__item"><a class="builder-navigation__link" href="{%url 'Iterations'%}"><span> Itinerary
+                        </span></a></li>
+                    <li class="builder-navigation__item"><a class="builder-navigation__link" href="{%url 'Price'%}"><span> Pricing
+                        </span></a></li>
+                  </ol>
+                </div>
+              </div>
+            </aside>
+
+            <div class="wt-col-lg-7 wt-col-md-7 wt-col-sm-9 wt-col-xs-12 ">
+              <div tabindex="1" class="wt-modal--closed modal  wt-modal__backdrop">
+                <div class="wt-modal__alert wt-modal__alert--sm undefined" style="margin-top: 250px;">
+                  <div>
+                    <div class="wt-modal__header wt-modal__header--sm null undefined"><span
+                        class="wt-modal__caption">Discard Changes</span></div>
+                  </div>
+                  <div class="wt-modal__body wt-modal__body--sm undefined">
+                    <p>Are you sure you want to discard the changes made and leave the trip as it is currently
+                      published?</p>
+                  </div>
+                  <div class="wt-modal__footer wt-modal__footer--sm  undefined"><a
+                      class="wt-button  wt-button--primary wt-button--md  " style="margin-right: 15px;"> Cancel </a><a
+                      class="wt-button  wt-button--red wt-button--md  "> Discard </a></div>
+                </div>
+              </div>
+              <div class="builder-form-layout__form-container wt-form-group">
+                
+                  <div></div>
+                  <div class="hint-trigger undefined">
+                    <div class="wt-row wt-form-group">
+                      <label for="trip-title" class="wt-col-md-3 wt-col-xs-12 wt-text wt-text--medium trip-builder-section-header">Trip
+                        Title</label>
+                      <div class="wt-col-md-9 wt-col-xs-12">
+                        <div class="form-group__input-container"><input type="text" id="trip-title" maxlength="70"
+                            name="Title" placeholder="e.g. One Day Trip to Karachi!"
+                            class="form-group__input form-group__input--md form-group__input--with-max-length form-group__input--null null "
+                            value="{{Title}}" required>
+                          <div class="form-group__max-length-label">70</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="hint-trigger undefined">
+                    <div class="wt-row wt-form-group"><label for="destination"
+                        class="wt-col-md-3 wt-col-xs-12 wt-text wt-text--medium trip-builder-section-header">Destination</label>
+                      <div class="wt-col-md-9 wt-col-xs-12">
+                        <div class="trip-destination undefined">
+                          <div class="wt-icon wt-icon-location trip-destination__icon"></div><input
+                            placeholder="What&#39;s the destination?" name="Destination"
+                            class="wt-form-group__input trip-destination__input pac-target-input" id="destination"
+                            value="{{Destination}}" autocomplete="new-password" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="hint-trigger undefined">
+                    <div class="wt-row wt-form-group"><label
+                        class="wt-col-md-3 wt-col-xs-12 wt-text wt-text--medium trip-builder-section-header">Trip is
+                        Offered</label>
+                      <div class="wt-col-md-9 wt-col-xs-12">
+                        <div class="builder-form-layout__dates-container">
+                          <div class="trip-builder-dates">
+                            <div class="trib-builder-dates__input-wrapper">
+                              <div class="DateRangePicker DateRangePicker_1">
+                                <div>
+                                  <link rel="stylesheet"
+                                    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+                                  <input placeholder="Start date" class="form-control form-group" type="text"
+                                    onfocus="(this.type='date')" name="Sdate" onblur="(this.type='text')" id="date" value="{{Sdate}}" required>
+                                  <input placeholder="End date" class="form-control form-group" type="text"
+                                    onfocus="(this.type='date')" name="Edate" onblur="(this.type='text')" value="{{Edate}}"id="date" required>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <hr class="trip-builder-hr">
+                  <div class="wt-row wt-form-grop"><label
+                      class="wt-col-xs-12 trip-builder-select-label wt-text wt-text--medium">Photos</label>
+                    <div class="wt-col-xs-12">
+                      <div class="trip-builder-images">
+                        <div class="trip-builder-images__image-container trip-builder-images__image-container--main">
+                          <div class="trip-builder-images__drop-area undefined">
+                            <div
+                              class="trip-builder-images__image trip-builder-images__image--main trip-builder-images__image--drop-area-bg"
+                              style="background-image: url(&quot;https://www.wetravel.com/assets/media/trip_large_placeholder.jpg&quot;);">
+                              <div class="trip-builder-images__background-overlap"></div>
+                              <div class="trip-builder-images__buttons">
+
+
+                                <!-- Section Start -->
+                                <!-- Dont Delete This Section -->
+
+                                <div class="uploadButton">
+                                  <div>
+                                    <input class="uploadFile" type="file" id="files" name="img" accept="image/*" value="{{pic}}" required>
+
+                                    <label for="files" id="upload"
+                                      class="wt-button  wt-button--primary wt-button--md  trip-builder-images__button">Choose
+                                      Image</label>
+                                  </div>
+                                  <div id="list"></div>
+
+                                </div>
+
+                                <script>
+                                  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+
+                                  function handleFileSelect(evt) {
+
+                                    var files = evt.target.files;
+
+                                    var f = files[0];
+
+                                    var reader = new FileReader();
+
+                                    reader.onload = (function (theFile) {
+
+                                      return function (e) {
+
+                                        document.getElementById('list').innerHTML = ['<img src="', e.target.result, '" title="', theFile.name, '" width="50" >'].join('');;
+                                        document.getElementById('upload').innerHTML = "Change Image";
+                                      };
+
+                                    })(f);
+
+                                    reader.readAsDataURL(f);
+
+                                  }
+
+
+                                </script>
+
+                                <!-- Section End -->
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                <!-- </form> -->
+              </div>
+              <div class="builder-form-layout__actions hidden-xs"><button
+                  class="wt-button  wt-button--green wt-button--md  wt-button  wt-button--green wt-button--md"> Next
+              </button></div>
+            </div>
+            <aside class="wt-col-lg-3 wt-col-md-2 hidden-sm hidden-xs builder-form-layout__hints">
+              <div>
+                <div class="hint-display">
+                  <div class="hint-display__hint" style="top: 0px;">
+                    <div class="wt-text wt-text--medium hint-display__title">Create Your Booking Page</div>
+                    <div class="wt-text wt-text--small hint-display__description">This is the first step towards
+                      building your booking page. Add basic details of the trip. <br><br> If you have questions, contact
+                      us at <a href="#">info@chalchaliye.com</a>.</div>
+                    <div class="hint-display__icon wt-icon wt-icon-hint"></div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+        <div class="builder-form-layout__mobile-actions">
+          <div>
+            <div class="wt-row">
+              <div class="wt-col-xs-6"><button
+                  class="wt-button  wt-button--green wt-button--md  wt-button  wt-button--green wt-button--md wt-button--block">
+                  Next </button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+  <div class="wt-footerNew">
+    <div class="wt-footerNew__wrapper"><span>
+        <div class="wt-footerNew__menus">
+          <div class="wt-footerNew__menus-inner">
+            <div class="wt-footerNew__menu">
+              <input type="radio" name="w1" id="a1">
+              <label for="a1" class="wt-footerNew__link wt-footerNew__link--main">About ChalChaliye</label>
+              <div class="wt-footerNew__links">
+                <div class="wt-footerNew__about">
+                  <a href="#" class="wt-footerNew__link">About Us</a>
+                  <a href="{%url 'Contact'%}" class="wt-footerNew__link">Contact</a>
+                </div>
+                <div class="wt-footerNew__about">
+
+                </div>
+                <div class="hidden-sm hidden-xs">
+                  <div class="wt-footerNew__socnet">
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wt-footerNew__menu">
+              <input type="radio" name="w1" id="a2">
+              <label for="a2" class="wt-footerNew__link wt-footerNew__link--main">Use ChalChaliye</label>
+              <div class="wt-footerNew__links">
+                <a class="wt-footerNew__link" href="{% url 'Help'%}">How it works</a>
+              </div>
+            </div>
+            <div class="wt-footerNew__menu">
+              <input type="radio" name="w1" id="a3">
+              <label for="a3" class="wt-footerNew__link wt-footerNew__link--main">Built For</label>
+              <div class="wt-footerNew__links">
+                <a class="wt-footerNew__link">Group Travel Companies</a>
+                <a class="wt-footerNew__link">Student and Youth Travel</a>
+                <a class="wt-footerNew__link">Sports and Team Travel</a>
+                <a class="wt-footerNew__link">University and MBA Travel</a>
+                <a class="wt-footerNew__link">Retreats and Wellness</a>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <hr class="wt-footerNew__menus-hr">
+        </div>
+      </span>
+      <div class="wt-footerNew__cr"><span class="wt-footerNew__cr--inc">ChalChaliye</span></div>
+      <div class="visible-sm visible-xs">
+        <div class="wt-footerNew__socnet"></div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+    <div></div>
+    <div></div>
+
+
+
+    <script src="{%static 'js/Btrip/vendor16.js'%}" defer=""></script>
+
+    <div></div>
+
+    <!-- Facebook Pixel Code -->
+</body>
+
+</html>
