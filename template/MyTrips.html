@@ -4,7 +4,7 @@
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Type" charset=UTF-8">
   <title class="next-head">WeTravel - Payment Platform for Travel Companies</title>
   <meta name="viewport" content="initial-scale=1.0, width=device-width">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,9 +20,9 @@
   <meta property="og:title" content="WeTravel - Payment Platform for Travel Companies">
   <meta property="og:site_name">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" type="text/css" href="{%static 'css/mytrip/slick.min.css'%}">
-  <link rel="stylesheet" type="text/css"
-    href="{%static 'css/mytrip/slick-theme.min.css'%}">
+  <link rel="stylesheet"  href="{%static 'css/a/slick.min.css'%}">
+  <link rel="stylesheet" 
+    href="{%static 'css/a/slick-theme.min.css'%}">
   <meta property="fb:app_id" content="249127048544707">
   <meta name="theme-color" content="#00C3D7">
 
@@ -30,13 +30,13 @@
   <!-- Google Tag Manager -->
   <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-N99W2X" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
-  <script type="text/javascript" async=""
+  <script  async=""
     src="{%static 'css/mytip/dc1n7jjb'%}"></script>
-  <script type="text/javascript" async=""
+  <script  async=""
     src="./WeTravel - Payment Platform for Travel Companies_files/analytics.js"></script>
-  <script src="./WeTravel - Payment Platform for Travel Companies_files/1763858.js" type="text/javascript"
+  <script src="./WeTravel - Payment Platform for Travel Companies_files/1763858.js" 
     id="hs-analytics"></script>
-  <script src="./WeTravel - Payment Platform for Travel Companies_files/1763858(1).js" type="text/javascript"
+  <script src="./WeTravel - Payment Platform for Travel Companies_files/1763858(1).js" 
     id="cookieBanner-1763858" data-cookieconsent="ignore" data-loader="hs-scriptloader" data-hsjs-portal="1763858"
     data-hsjs-env="prod" data-hsjs-hublet="na1"></script>
   <script src="./WeTravel - Payment Platform for Travel Companies_files/458776527643789" async=""></script>
@@ -55,9 +55,9 @@
   <meta name="google-site-verification" content="mb627SqdRTqSb3quVoU1gQTgxkZ01bDLOc1cqtPmZtA">
 
   <!-- Hotjar Tracking Code for www.wetravel.com -->
-  <link rel="stylesheet" href="{%static 'css/mytrip/my_trips.js.d935e000.css'%}">
-  <link rel="stylesheet" href=".{%static 'css/mytrip/_app.js.89df09ac.css'%}">
-  <style type="text/css">
+  <link rel="stylesheet" href="{%static 'css/a/my_trips.js.d935e000.css'%}">
+  <link rel="stylesheet" href="{%static 'css/a/_app.js.89df09ac.css'%}">
+  <style>
     iframe#_hjRemoteVarsFrame {
       display: none !important;
       width: 1px !important;
@@ -79,8 +79,8 @@
         <div class="topmenu__staticblock "><a class="topmenu__logo ">
 
 
-            <img src="{%static 'pic/ourlogo.png'%}" alt="chalchliye logo"
-              class="">
+          <a href="{%url 'HomePage'%}"><img src="{%static 'pic/ourlogo.png'%}"
+            alt="chalchliye logo" class=""></a>
 
 
 
@@ -92,16 +92,16 @@
         <div class="topmenu__togglepart  " id="travel-collapse">
           <div>
             <ul class="topmenu__menuwrapper  topmenu__menuwrapper--right hidden--md hidden--lg">
-              <li class="topmenu__li"><a class="topmenu__menu"  href="#">Ho It Works</li>
-              <li class="topmenu__li"><a class="topmenu__menu" href="{%url 'Trips'%}">Trips</a></li>
-              <li class="topmenu__li"><a class="topmenu__menu" href="#">Profile</a></li>
+              <li class="topmenu__li"><a class="topmenu__menu" target="_blank" href="#">Ho It Works</li>
+              <li class="topmenu__li"><a class="topmenu__menu" href="{%url 'MyTrips'%}">My Trips</a></li>
+              <li class="topmenu__li"><a class="topmenu__menu" href="{%url 'Profile'%}">Profile</a></li>
             </ul>
             <ul class="topmenu__menuwrapper  topmenu__menuwrapper--right hidden--sm hidden--xs">
               <li class="topmenu__li"><a class="wt-button wt-button--orange wt-button--md topmenu__button--create"
-                  href="{%url 'Trips'%}">CREATE YOUR TRIP</a></li>
+                  href="{%url 'Basics'%}">CREATE YOUR TRIP</a></li>
             </ul>
             <ul class="topmenu__menuwrapper topmenu__menuwrapper--right hidden--xs hidden--sm">
-              <li class="topmenu__li"><a class="topmenu__menu"  href="{%url 'Help'%}">How It Works</a></li>
+              <li class="topmenu__li"><a class="topmenu__menu" href="{%url 'Help'%}">How It Works</a></li>
               <li class="topmenu__li"><a class="topmenu__menu" href="{%url 'Trips'%}">TRIPS</a></li>
               <li class="topmenu__li">
                 <div class="help-popup"><a class="topmenu__menu topmenu__menu--profile"><span></span>
@@ -112,9 +112,9 @@
                   <div class="callout contextmenu--arrow contextmenu__callout">
                     <div class="contextmenu__content"><a class="contextmenu__link" href="{%url 'MyTrips'%}">My Trips
                         <hr class="contextmenu__hr">
-                      </a><a class="contextmenu__link" href="#">Profile
+                      </a><a class="contextmenu__link" href="{%url 'Profile'%}">Profile
                         <hr class="contextmenu__hr">
-                      </a><a class="contextmenu__link" rel="nofollow" data-method="delete" href="{%url 'SignOut'%}">Sign Out</a></div>
+                      </a><a class="contextmenu__link" rel="nofollow" href="{%url 'SignOut'%}">Sign Out</a></div>
                   </div>
                 </div>
               </li>
@@ -186,11 +186,71 @@
                   <div class="clearfix"></div>
                   <div></div>
                 </div>
+
+
+
+                <!-- Your Trips, Instance 1 -->
+                {% if Trips %}
+                {% for trip in Trips %}
+                <div>
+                  <div>
+                    <section class="trip-block clearfix">
+                      <div tabindex="1" class="wt-modal--closed modal modal--my-trips wt-modal__backdrop">
+                        <div class="wt-modal__alert  undefined">
+                          <div></div>
+                          <div class="wt-modal__body wt-modal__body-- undefined">
+                            <p></p>
+                          </div>
+                          <div class="wt-modal__footer wt-modal__footer--  undefined"><a
+                              class="wt-button  wt-button--primary wt-button--md  " style="margin-right: 15px;"> Cancel
+                            </a><a class="wt-button  wt-button--red wt-button--md  "> Ok </a></div>
+                        </div>
+                      </div>
+                      <div class="trip-block__image-holder">
+                        {%if trip.0.picture %}
+                       <a href="{%url 'manage' trip.0.id%}"> <img
+                          src="{{trip.0.picture.url}}"
+                          alt="" class="trip-block__img">
+                        </a>
+                        {% endif %}
+                        </div>
+                      <div class="trip-block__content-holder">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <h4 class="trip-block__name"><a class="trip-block__link"
+                                href="{%url 'manage' trip.0.id%}">{{trip.0.Title}}</a></h4>
+                            <p class="trip-block__date hidden-xs"><span
+                                class="wt-icon wt-icon-calendar-blue-small"></span>{{trip.0.Sdate}}</p>
+                          </div>
+                          <div class="col-md-6"><a href="/user/manage_trips/54778982"
+                              class="wt-button wt-button--md wt-button--block wt-button--green visible-xs trip-block__cta-button">Manage
+                              trip</a></div>
+                        </div>
+                        <div class="trip-block__content-bottom hidden-xs">
+                          <div class="row">
+                            <div class="col-md-12"><span class="trip-block__availability-info">Amount to
+                                collect:&nbsp;<strong>Rs.{{trip.0.price}}</strong></span><span
+                                class="trip-block__participants-info"><i
+                                  class="wt-icon wt-icon-user"></i>&nbsp;{{trip.1}}&nbsp;Going</span></div>
+                            <div class="col-md-6"><a href="/user/manage_trips/54778982"
+                                class="wt-button wt-button--md wt-button--block wt-button--green">Manage trip</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+                {% endfor %}
+                {% endif %}
+
+
+
+               
                 <div>
                   <section class="my-trips__info-box">
-                    <h5 class="my-trips__info-title">You haven’t joined any trips yet!</h5>
-                    <div class="my-trips__info-desc">Join an authentic group trip organized by passionate individuals!
-                    </div><a href="{%url 'Trips'%}" 
+                    <h5 class="my-trips__info-title">Looking to go on a trip?</h5>
+                    <div class="my-trips__info-desc">Join an authentic group trip organized by passionate organizers!
+                    </div><a href="{%url 'Trips'%}"
                       class="wt-button wt-button--md wt-button--primary my-trips__discover-button">Discover Trips</a>
                   </section>
                 </div>
@@ -215,7 +275,7 @@
                   <div class="wt-footerNew__links">
                     <div class="wt-footerNew__about">
                       <a href="#" class="wt-footerNew__link">About Us</a>
-                      <a href="#" class="wt-footerNew__link">Contact</a>
+                      <a href="{%url 'Contact'%}" class="wt-footerNew__link">Contact</a>
                     </div>
                     <div class="wt-footerNew__about">
 
@@ -233,7 +293,7 @@
                   <input type="radio" name="w1" id="a2">
                   <label for="a2" class="wt-footerNew__link wt-footerNew__link--main">Use ChalChaliye</label>
                   <div class="wt-footerNew__links">
-                    <a class="wt-footerNew__link">How it works</a>
+                    <a class="wt-footerNew__link" href="{% url 'Help'%}">How it works</a>
                   </div>
                 </div>
                 <div class="wt-footerNew__menu">
@@ -276,5 +336,4 @@
 
 
 </body>
-
 </html>

@@ -1460,8 +1460,8 @@
         <div class="topmenu__staticblock "><a class="topmenu__logo ">
 
 
-            <img src="{%static 'pic/ourlogo.png'%}" alt="chalchliye logo"
-              class="myImage">
+          <a href="{%url 'HomePage'%}"><img src="{%static 'pic/ourlogo.png'%}"
+            alt="chalchliye logo" class=""></a>
 
 
 
@@ -1475,7 +1475,7 @@
             <ul class="topmenu__menuwrapper  topmenu__menuwrapper--right hidden--md hidden--lg">
               <li class="topmenu__li"><a class="topmenu__menu"  href="#">Ho It Works</li>
               <li class="topmenu__li"><a class="topmenu__menu" href="{%url 'MyTrips'%}">My Trips</a></li>
-              <li class="topmenu__li"><a class="topmenu__menu" href="#">Profile</a></li>
+              <li class="topmenu__li"><a class="topmenu__menu" href="{%url 'Profile'%}">Profile</a></li>
             </ul>
             <ul class="topmenu__menuwrapper  topmenu__menuwrapper--right hidden--sm hidden--xs"></ul>
             <ul class="topmenu__menuwrapper topmenu__menuwrapper--right hidden--xs hidden--sm">
@@ -1488,7 +1488,7 @@
                   <div class="callout contextmenu--arrow contextmenu__callout">
                     <div class="contextmenu__content"><a class="contextmenu__link" href="{%url 'MyTrips'%}">My Trips
                         <hr class="contextmenu__hr">
-                      </a><a class="contextmenu__link" href="#">Profile
+                      </a><a class="contextmenu__link" href="{%url 'Profile'%}">Profile
                         <hr class="contextmenu__hr">
                       </a><a class="contextmenu__link" rel="nofollow" href="{%url 'SignOut'%}">Sign Out</a></div>
                   </div>
@@ -1578,7 +1578,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="clearfix"></div>
+                    <div class="clearfix">
+                      
+                    </div>
                   </div>
                   <div class="hint-trigger undefined">
                     <div class="wt-row wt-form-group"><label for="destination"
@@ -1586,13 +1588,25 @@
                       <div class="wt-col-md-9 wt-col-xs-12">
                         <div class="trip-destination undefined">
                           <div class="wt-icon wt-icon-location trip-destination__icon"></div><input
-                            placeholder="What&#39;s the destination?" name="Destination"
+                            placeholder="What&#39;s the destination?" name="Destination" type="text"
                             class="wt-form-group__input trip-destination__input pac-target-input" id="destination"
                             value="{{Destination}}" autocomplete="new-password" required>
                         </div>
                       </div>
                     </div>
                     <div class="clearfix"></div>
+                    <div class="hint-trigger undefined">
+                      <div class="wt-row wt-form-group"><label for="destination"
+                          class="wt-col-md-3 wt-col-xs-12 wt-text wt-text--medium trip-builder-section-header">Trip Size</label>
+                        <div class="wt-col-md-9 wt-col-xs-12">
+                          <div class="trip-destination undefined">
+                            <div class="wt-icon wt-icon-location trip-destination__icon"></div><input
+                              placeholder="20-30 people" name="people" type="number"
+                              class="wt-form-group__input trip-destination__input pac-target-input" id="people"
+                              value="{{people}}" autocomplete="new-password" required>
+                          </div>
+                        </div>
+                      </div>
                   </div>
                   <div class="hint-trigger undefined">
                     <div class="wt-row wt-form-group"><label
@@ -1639,11 +1653,12 @@
 
                                 <div class="uploadButton">
                                   <div>
-                                    <input class="uploadFile" type="file" id="files" name="img" accept="image/*" value="{{pic}}" required>
-
-                                    <label for="files" id="upload"
-                                      class="wt-button  wt-button--primary wt-button--md  trip-builder-images__button">Choose
-                                      Image</label>
+                                    <input class="uploadFile" style="display: none" type="file" id="files" name="img"
+                                    accept="image/*">
+      
+                                  <label for="files" id="upload"
+                                    class="wt-button  wt-button--primary wt-button--md  trip-builder-images__button">Upload
+                                    Profile Picture</label>
                                   </div>
                                   <div id="list"></div>
 

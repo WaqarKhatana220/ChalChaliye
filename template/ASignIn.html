@@ -86,8 +86,8 @@
         <div class="topmenu__staticblock "><a class="topmenu__logo ">
 
 
-            <img src="{%static 'pic/ourlogo.png'%}"
-              alt="chalchliye logo" class="">
+            <a href="{%url 'HomePage'%}"><img src="{%static 'pic/ourlogo.png'%}"
+              alt="chalchliye logo" class=""></a>
 
 
 
@@ -100,7 +100,7 @@
           <div>
             <ul class="topmenu__menuwrapper  topmenu__menuwrapper--right hidden--md hidden--lg">
               <li class="topmenu__li"><a class="topmenu__menu"  href="#">Ho It Works</li>
-              <li class="topmenu__li"><a class="topmenu__menu" href="{%url 'Trips'%}">Trips</a></li>
+              <li class="topmenu__li"><a class="topmenu__menu" href="{%url 'Trips'%}"><i className="fas fa-plane"></i>Trips</a></li>
               <li class="topmenu__li"><a class="topmenu__menu" href="#">Profile</a></li>
             </ul>
             <ul class="topmenu__menuwrapper  topmenu__menuwrapper--right hidden--sm hidden--xs">
@@ -119,7 +119,7 @@
                   <div class="callout contextmenu--arrow contextmenu__callout">
                     <div class="contextmenu__content"><a class="contextmenu__link" href="{%url 'MyTrips'%}">My Trips
                         <hr class="contextmenu__hr">
-                      </a><a class="contextmenu__link" href="#">Profile
+                      </a><a class="contextmenu__link" href="{%url 'Profile'%}">Profile
                         <hr class="contextmenu__hr">
                       </a><a class="contextmenu__link" rel="nofollow"  href="{%url 'SignOut'%}">Sign Out</a></div>
                   </div>
@@ -342,11 +342,7 @@
               <h1 class="landing-banner__title">The perfect customer journey starts with ChalChaliye</h1>
               <h2 class="landing-banner__desc">Whether you are a trip organizer looking to grow their business or a
                 traveller looking to explore Pakistan, ChalChaliye has got you covered.</h2>
-              <div class="landing-banner__button-container"><a
-                  class="wt-button  wt-button--blue wt-button--md  landing-banner__button" href="#">
-                  <!-- -->Register Now
-                  <!-- -->
-                </a></div>
+              <div class="landing-banner__button-container"></div>
             </div>
             <div class="wt-col-md-3 wt-col-lg-3 hidden-sm hidden-xs" style="text-align:left;margin-top:30px"><svg
                 width="268" height="381" viewBox="0 0 268 381">

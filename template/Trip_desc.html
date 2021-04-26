@@ -1463,8 +1463,8 @@
         <div class="topmenu__staticblock "><a class="topmenu__logo ">
 
 
-            <img src="{%static 'pic/ourlogo.png'%}" alt="chalchliye logo"
-              class="">
+          <a href="{%url 'HomePage'%}"><img src="{%static 'pic/ourlogo.png'%}"
+            alt="chalchliye logo" class=""></a>
 
 
 
@@ -1478,7 +1478,7 @@
             <ul class="topmenu__menuwrapper  topmenu__menuwrapper--right hidden--md hidden--lg">
               <li class="topmenu__li"><a class="topmenu__menu"  href="#">Ho It Works</li>
               <li class="topmenu__li"><a class="topmenu__menu" href="{%url 'MyTrips'%}">My Trips</a></li>
-              <li class="topmenu__li"><a class="topmenu__menu" href="#">Profile</a></li>
+              <li class="topmenu__li"><a class="topmenu__menu" href="{%url 'Profile'%}">Profile</a></li>
             </ul>
             <ul class="topmenu__menuwrapper  topmenu__menuwrapper--right hidden--sm hidden--xs"></ul>
             <ul class="topmenu__menuwrapper topmenu__menuwrapper--right hidden--xs hidden--sm">
@@ -1491,7 +1491,7 @@
                   <div class="callout contextmenu--arrow contextmenu__callout">
                     <div class="contextmenu__content"><a class="contextmenu__link" href="{%url 'MyTrips'%}">My Trips
                         <hr class="contextmenu__hr">
-                      </a><a class="contextmenu__link" href="#">Profile
+                      </a><a class="contextmenu__link" href="{%url 'Profile'%}">Profile
                         <hr class="contextmenu__hr">
                       </a><a class="contextmenu__link" rel="nofollow" href="{%url 'SignOut'%}">Sign Out</a></div>
                   </div>
