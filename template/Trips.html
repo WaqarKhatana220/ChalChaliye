@@ -1,12 +1,9 @@
 {%load static%}
 <!DOCTYPE html>
-<!-- saved from url=(0030)https://www.wetravel.com/trips -->
 <html class="no-js" lang="en">
-<!--<![endif]-->
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <!-- CSS -->
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -703,7 +700,23 @@
       background-position: 0 0;
       margin-top: 0
     }
+    .message {
+	border-radius: 10px;
+	box-shadow: 3px 3px 4px 0px rgba(50, 50, 50, 0.75);
+	color: white;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	text-align: center;
+	width: 80%;
+  background-color: red;
+}
 
+/*
+ * Give the various message types the correct colors
+ */
     .collapse--closed .collapse__content {
       display: none
     }
@@ -2500,8 +2513,8 @@
       <div class="topmenu__staticblock "><a class="topmenu__logo ">
 
 
-          <img src="{%static 'pic/ourlogo.png'%}" alt="chalchliye logo"
-            class="">
+        <a href="{%url 'HomePage'%}"><img src="{%static 'pic/ourlogo.png'%}"
+          alt="chalchliye logo" class=""></a>
 
 
 
@@ -2514,7 +2527,7 @@
         <div>
           <ul class="topmenu__menuwrapper  topmenu__menuwrapper--right hidden--md hidden--lg">
             <li class="topmenu__li"><a class="topmenu__menu"  href="{%url 'Help'%}">Ho It Works</li>
-            <li class="topmenu__li"><a class="topmenu__menu" href="#">Profile</a></li>
+            <li class="topmenu__li"><a class="topmenu__menu" href="{%url 'Profile'%}">Profile</a></li>
           </ul>
           <ul class="topmenu__menuwrapper  topmenu__menuwrapper--right hidden--sm hidden--xs">
             <li class="topmenu__li"><a class="wt-button wt-button--orange wt-button--md topmenu__button--create"
@@ -2531,7 +2544,7 @@
                 <div class="callout contextmenu--arrow contextmenu__callout">
                   <div class="contextmenu__content"><a class="contextmenu__link" href="{%url 'MyTrips'%}">My Trips
                       <hr class="contextmenu__hr">
-                    </a><a class="contextmenu__link" href="#">Profile
+                    </a><a class="contextmenu__link" href="{%url 'Profile'%}">Profile
                       <hr class="contextmenu__hr">
                     </a><a class="contextmenu__link" rel="nofollow" href="{%url 'SignOut'%}">Sign Out</a></div>
                 </div>
@@ -3148,7 +3161,15 @@
 
 
 
-
+  {% if messages %}
+  {% for message in messages %}
+  <div class="landing-banner__desc messages success alert" style="color: red;text-align: center;">
+    <strong style="text-align: center;">{{message}}</strong> 
+    <span class="landing-banner__desc" style="color: red;" onclick="this.parentElement.style.display='none';">&times;</span> 
+    
+  </div>
+  {% endfor %}
+  {% endif %}
 
   <div id="notification"></div>
 
@@ -3172,79 +3193,99 @@
         Whether you are looking for affordable tours or luxury
         travel, we've got you covered!!
       </h2>
-      <span>
-        <span id="trips">
-          <div class="yoga-grid__body" data-reactid=".epuff7z3wg" data-react-checksum="979071172">
-            <div class="wt-icon wt-icon-favorite-red-bordered" style="display:none;" data-reactid=".epuff7z3wg.0"></div>
-            <div class="wt-icon wt-icon-favorite-white-hover" style="display:none;" data-reactid=".epuff7z3wg.1"></div>
-            <div class="wt-icon wt-icon-favorite-white" style="display:none;" data-reactid=".epuff7z3wg.2"></div>
-
-            {% if Trips %}
-            {% for trip in Trips %}
-            <!-- Instance 1 of the trip reading -->
-
-            <div data-reactid=".epuff7z3wg.3:$0">
-              <div class="yoga-trip" data-reactid=".epuff7z3wg.3:$0.1">
-                <div class="yoga-trip__wrapper" data-reactid=".epuff7z3wg.3:$0.1.0">
-                  <div class="yoga-trip__topBox" data-reactid=".epuff7z3wg.3:$0.1.0.0">
-                    <div class="yoga-trip__date" data-reactid=".epuff7z3wg.3:$0.1.0.0.0"><span
-                        class="wt-icon wt-icon-calendar-blue-small"
-                        data-reactid=".epuff7z3wg.3:$0.1.0.0.0.0"></span><span
-                        data-reactid=".epuff7z3wg.3:$0.1.0.0.0.1"> </span><span
-                        data-reactid=".epuff7z3wg.3:$0.1.0.0.0.2">{{trip.Edate}}</span></div>
-                  </div>
-                  <div class="w-yoga-trip__imgHolder" data-reactid=".epuff7z3wg.3:$0.1.0.1"><a
-                      href=""
-                      data-reactid=".epuff7z3wg.3:$0.1.0.1.0"><img class="yoga-trip__img"
-                        src="{{trip.picture.url}}"
-                        alt="Trip mainpage placeholder" data-reactid=".epuff7z3wg.3:$0.1.0.1.0.0"></a></div>
-                  <div class="yoga-trip__bottomBox" data-reactid=".epuff7z3wg.3:$0.1.0.2">
-                    <div data-reactid=".epuff7z3wg.3:$0.1.0.2.0"><span class="yoga-trip__itemName pull-left"
-                        data-reactid=".epuff7z3wg.3:$0.1.0.2.0.0"><a style="text-align:center;"
-                          href="#"
-                          data-reactid=".epuff7z3wg.3:$0.1.0.2.0.0.0">{{trip.Title}}</a></span></div>
-                    <div class="clearfix" data-reactid=".epuff7z3wg.3:$0.1.0.2.1"></div>
-                    <div class="yoga-trip__location" data-reactid=".epuff7z3wg.3:$0.1.0.2.2"><i
-                        class="wt-icon wt-icon-location" style="width:14px;height:20px;vertical-align:middle;"
-                        data-reactid=".epuff7z3wg.3:$0.1.0.2.2.0"></i><span data-reactid=".epuff7z3wg.3:$0.1.0.2.2.1">
-                      </span><span data-reactid=".epuff7z3wg.3:$0.1.0.2.2.2">{{trip.Destination}}</span></div>
-                    <div class="yoga-trip__owner" data-reactid=".epuff7z3wg.3:$0.1.0.2.3"></div>
-                    <div class="yoga-trip__price" data-reactid=".epuff7z3wg.3:$0.1.0.2.4"><span
-                        class="yoga-trip__pricecaption" data-reactid=".epuff7z3wg.3:$0.1.0.2.4.0">Price</span><span
-                        data-reactid=".epuff7z3wg.3:$0.1.0.2.4.1"> </span><span
-                        data-reactid=".epuff7z3wg.3:$0.1.0.2.4.2">PKR {{trip.price}}</span></div>
-                    <div class="yoga-trip__period" data-reactid=".epuff7z3wg.3:$0.1.0.2.5">21 days</div>
-                    <div class="clearfix" data-reactid=".epuff7z3wg.3:$0.1.0.2.6"></div>
-                  </div>
+      <span id="trips">
+        <div class="yoga-grid__body" data-reactid=".epuff7z3wg" data-react-checksum="979071172">
+          <div class="wt-icon wt-icon-favorite-red-bordered" style="display:none;" data-reactid=".epuff7z3wg.0"></div>
+          <div class="wt-icon wt-icon-favorite-white-hover" style="display:none;" data-reactid=".epuff7z3wg.1"></div>
+          <div class="wt-icon wt-icon-favorite-white" style="display:none;" data-reactid=".epuff7z3wg.2"></div>
+          {% if Trips%}
+          {%for trip in Trips%}
+          <!-- I  nstance 1 of the trip reading -->
+          <div data-reactid=".epuff7z3wg.3:$0">
+            <div class="yoga-trip" data-reactid=".epuff7z3wg.3:$0.1">
+              <div class="yoga-trip__wrapper" data-reactid=".epuff7z3wg.3:$0.1.0">
+                <div class="yoga-trip__topBox" data-reactid=".epuff7z3wg.3:$0.1.0.0">
+                  <div class="yoga-trip__date" data-reactid=".epuff7z3wg.3:$0.1.0.0.0"><span
+                      class="wt-icon wt-icon-calendar-blue-small"
+                      data-reactid=".epuff7z3wg.3:$0.1.0.0.0.0"></span><span
+                      data-reactid=".epuff7z3wg.3:$0.1.0.0.0.1"> </span><span
+                      data-reactid=".epuff7z3wg.3:$0.1.0.0.0.2">{{trip.0.Sdate}}</span></div>
+                </div>
+                <div class="w-yoga-trip__imgHolder" data-reactid=".epuff7z3wg.3:$0.1.0.1"><a
+                    href="{%url 'Book' trip.0.id%}"
+                    data-reactid=".epuff7z3wg.3:$0.1.0.1.0">
+                    {% if trip.0.picture %}
+                    <img class="yoga-trip__img" style="float:left; width:100%;height:270px;background-size:cover;"
+                      src="{{trip.0.picture.url}}"
+                      alt="Trip mainpage placeholder" data-reactid=".epuff7z3wg.3:$0.1.0.1.0.0">
+                    {%endif%}
+                    </a></div>
+                <div class="yoga-trip__bottomBox" data-reactid=".epuff7z3wg.3:$0.1.0.2">
+                  <div data-reactid=".epuff7z3wg.3:$0.1.0.2.0"><span class="yoga-trip__itemName pull-left"
+                      data-reactid=".epuff7z3wg.3:$0.1.0.2.0.0"><a style="text-align:center;"
+                        href="{%url 'Book' trip.0.id%}"
+                        data-reactid=".epuff7z3wg.3:$0.1.0.2.0.0.0">{{trip.0.Title}}</a></span></div>
+                  <div class="clearfix" data-reactid=".epuff7z3wg.3:$0.1.0.2.1"></div>
+                  <div class="yoga-trip__location" data-reactid=".epuff7z3wg.3:$0.1.0.2.2"><i
+                      class="wt-icon wt-icon-location" style="width:14px;height:20px;vertical-align:middle;"
+                      data-reactid=".epuff7z3wg.3:$0.1.0.2.2.0"></i><span data-reactid=".epuff7z3wg.3:$0.1.0.2.2.1">
+                    </span><span data-reactid=".epuff7z3wg.3:$0.1.0.2.2.2">To: {{trip.0.Destination}}</span></div>
+                  <div class="yoga-trip__owner" data-reactid=".epuff7z3wg.3:$0.1.0.2.3"><a class="yoga-trip__profile"
+                       data-reactid=".epuff7z3wg.3:$0.1.0.2.3.0">
+                      <div class="avatar__container yoga-trip__personimg" data-reactid=".epuff7z3wg.3:$0.1.0.2.3.0.0">
+                        {% if trip.1.picture %}
+                        <img class="avatar avatar--normal" 
+                          src="{{trip.1.picture.url}}"
+                          data-reactid=".epuff7z3wg.3:$0.1.0.2.3.0.0.0">
+                          {%endif%}</div><span class="yoga-trip__username"
+                        data-reactid=".epuff7z3wg.3:$0.1.0.2.3.0.1"><span class="yoga-trip__with"
+                          data-reactid=".epuff7z3wg.3:$0.1.0.2.3.0.1.0">with</span><span
+                          data-reactid=".epuff7z3wg.3:$0.1.0.2.3.0.1.1"> </span><span
+                          data-reactid=".epuff7z3wg.3:$0.1.0.2.3.0.1.2">{{trip.0.user.username}}</span></span>
+                    </a></div>
+                  <div class="yoga-trip__price" data-reactid=".epuff7z3wg.3:$0.1.0.2.4"><span
+                      class="yoga-trip__pricecaption" data-reactid=".epuff7z3wg.3:$0.1.0.2.4.0">Price</span><span
+                      data-reactid=".epuff7z3wg.3:$0.1.0.2.4.1"> </span><span
+                      data-reactid=".epuff7z3wg.3:$0.1.0.2.4.2">PKR: {{trip.0.price}}</span></div>
+                  <div class="yoga-trip__period" data-reactid=".epuff7z3wg.3:$0.1.0.2.5">{{trip.2}} days</div>
+                  <div class="clearfix" data-reactid=".epuff7z3wg.3:$0.1.0.2.6"></div>
                 </div>
               </div>
             </div>
-            {% endfor %}
-            {% endif %}
-
-            <div class="clearfix" data-reactid=".epuff7z3wg.4"></div>
           </div>
-        </span>
+          {% endfor %}
+          {% endif %}
+
+          <div class="clearfix" data-reactid=".epuff7z3wg.4"></div>
+        </div>
       </span>
+    </span>
 
 
 
-      <div class="yoga-grid__caption yoga-grid__caption--atend hidden--xs">
-        <h1 class="heading heading--inline yoga-grid__heading yoga-grid__heading--atend">
+    <div class="yoga-grid__caption yoga-grid__caption--atend hidden--xs">
+      <h1 class="heading heading--inline yoga-grid__heading yoga-grid__heading--atend">
 
-        </h1>
-      </div>
-      <h2 class="yoga-grid__desc yoga-grid__desc--atend hidden--xs">
-
-      </h2>
-
-
-
+      </h1>
     </div>
+    <h2 class="yoga-grid__desc yoga-grid__desc--atend hidden--xs">
+
+    </h2>
+
+
+
   </div>
-  <div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>
 
 
+
+
+
+
+
+
+</div>
 
 
 
