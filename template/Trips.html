@@ -3184,6 +3184,7 @@
         </div>
         <div class="clearfix"></div>
       </div>
+      {% if Trips%}
       <h2 class="yoga-grid__desc hidden--xs">
 
         We know what it's like. You are looking for exploring the beauty of Pakistan, but the possibilities online are
@@ -3193,12 +3194,16 @@
         Whether you are looking for affordable tours or luxury
         travel, we've got you covered!!
       </h2>
+      {% else %}
+      <h2 class="yoga-grid__desc hidden--xs">
+        Sorry! No trips matched the given filter. Please check back later.
+      </h2>
+      {% endif %}
       <span id="trips">
         <div class="yoga-grid__body" data-reactid=".epuff7z3wg" data-react-checksum="979071172">
           <div class="wt-icon wt-icon-favorite-red-bordered" style="display:none;" data-reactid=".epuff7z3wg.0"></div>
           <div class="wt-icon wt-icon-favorite-white-hover" style="display:none;" data-reactid=".epuff7z3wg.1"></div>
           <div class="wt-icon wt-icon-favorite-white" style="display:none;" data-reactid=".epuff7z3wg.2"></div>
-          <p>git profile tets</p>
           {% if Trips%}
           {%for trip in Trips%}
           <!-- I  nstance 1 of the trip reading -->
