@@ -1,4 +1,5 @@
 {%load static %}
+{% load custom_filters %}
 <!DOCTYPE html>
 <!-- saved from url=(0090)https://www.wetravel.com/trips/sweet-freedom-yoga-retreat-peter-walters-yoga-cobb-74632441 -->
 <html>
@@ -1147,7 +1148,7 @@ Come willing to begin anew - busting out of quarantine, and reconnecting with ol
                                           <div
                                             class="collapsed-text__text wt-text wt-text--regular checkout-table__description"
                                             style="">
-                                            <p>Discount: Yes. Discount: Applicable {{trip.Gsize}} participants </p>
+                                            <!-- <p>Discount: Yes. Discount: Applicable {{trip.Gsize}} participants </p> -->
                                           </div>
                                         </div>
                                         <div class="collapsed-text__buttons collapsed-text__buttons--hidden"
@@ -1394,17 +1395,23 @@ Come willing to begin anew - busting out of quarantine, and reconnecting with ol
                 <div class="wt-row">
                   <div class="wt-col-md-2"></div>
                   <div class="wt-col-md-7 trip-header__trip-title-container">
-                    <h1 class="wt-h2 trip-header__trip-title">{{trip.city}}</h1>
+                    <h1 class="wt-h2 trip-header__trip-title">{{trip.city}} -> {{trip.Destination}}</h1>
                   </div>
                 </div>
-                <div class="wt-row">
+                <!-- <div class="wt-row">
                   <div class="wt-col-md-2 wt-col-lg-2"></div>
                   <div class="wt-col-lg-5 wt-col-md-4 wt-col-sm-12">
                     <p class="wt-text wt-text--regular trip-header__location-container"><i
                         class="wt-icon wt-icon-location trip-header__location-icon"></i><span
-                        class="wt-text trip-header__location">{{trip.Destination}}</span></p>
+                        class="wt-text trip-header__location">to</span></p>
                   </div>
-                </div>
+                </div> -->
+                <!-- <div class="wt-row">
+                  <div class="wt-col-md-2"></div>
+                  <div class="wt-col-md-7 trip-header__trip-title-container">
+                    <h1 class="wt-h2 trip-header__trip-title">{{trip.Destination}}</h1>
+                  </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -1552,26 +1559,32 @@ Come willing to begin anew - busting out of quarantine, and reconnecting with ol
                 <h2 class="wt-h4 trip-page-section__header" style="margin-bottom:5px">What's Included</h2>
                 <div style="padding: 30px 50px; background: #f0f0f0;">
                   <ul class="trip-includes">
-                    {%for i in desc%}
-                    <li class="wt-text trip-includes__include-item trip-includes__include-item--included">
-                      <div class="trip-includes__include-name wt-h6"><i
-                        class="wt-icon wt-icon-ok verification-checkmark__trigger-icon"></i><strong>{{i}}</strong></div>
+                    {% for i in desc %}
+                    <li class="wt-text trip-includes__include-item trip-includes__include-item--not-included wt-text wt-text--placeholder">
+                      <div class="trip-includes__include-name wt-text wt-text--medium wt-text--placeholder">
+                        &#9989;  {{ i }} <!-- Cross mark for not included -->
+                      </div>
                       <div class="wt-text wt-text--regular trip-includes__include-description"></div>
                     </li>
-                    {%endfor%}
-                      <li
-                      class="wt-text trip-includes__include-item trip-includes__include-item--not-included wt-text wt-text--placeholder">
-                      <div class="trip-includes__include-name wt-text wt-text--medium wt-text--placeholder">
-                        &#10060;{{trip.NotIncluded}}</div>
-                      <div class="wt-text wt-text--regular trip-includes__include-description"></div>
+                    {% endfor %}
                     
+                    {% for i in not_included %}                    
+                    <li class="wt-text trip-includes__include-item trip-includes__include-item--not-included wt-text wt-text--placeholder">
+                      <div class="trip-includes__include-name wt-text wt-text--medium wt-text--placeholder">
+                        &#10060;  {{ i }} <!-- Cross mark for not included -->
+                      </div>
+                      <div class="wt-text wt-text--regular trip-includes__include-description"></div>
+                    </li>
+                    {% endfor %}
+
+                  
                   </ul>
                 </div>
               </section>
             </div>
             <div class="trip-page__nav-item" id="packages-and-options">
               <section class="trip-page__section trip-page-section">
-                <h2 class="wt-h4 trip-page-section__header" style="margin-bottom:25px"><strong>jALDI Karo Tripe ke MAZE LOOO</strong> </h2>
+                <h2 class="wt-h4 trip-page-section__header" style="margin-bottom:25px"><strong>Hurry UP!</strong> </h2>
                 <div class="available-packages">
                   <div class="available-packages__package">
                     <div class="wt-row package">
@@ -1582,12 +1595,12 @@ Come willing to begin anew - busting out of quarantine, and reconnecting with ol
                               class="availability package__availability availability--warning">only {{size}} left</span></div>
                           <div class="wt-text package__description">
                             <div class="collapsed-text collapsed-text--expanded">
-                              <div class="collapsed-text__text-container" style="height: 42px;">
+                              <!-- <div class="collapsed-text__text-container" style="height: 42px;">
                                 <div class="collapsed-text__text wt-text wt-text--regular checkout-table__description"
                                   style="">
                                   <p> <br> Discount: Yes Discount Applicable: on <strong>{{trip.Gsize}} participants</strong> </p>
                                 </div>
-                              </div>
+                              </div> -->
                               <div class="collapsed-text__buttons collapsed-text__buttons--hidden" style="top:5px">
                                 <div class="collapsed-text__text-overlapper collapsed-text__text-overlapper--white">
                                 </div><a
@@ -1606,7 +1619,7 @@ Come willing to begin anew - busting out of quarantine, and reconnecting with ol
                       <div class="wt-col-lg-2 wt-col-md-3 wt-col-sm-3 hide-xs package__actions">
                         <div><a onclick="popupHandler()"
                           class="wt-button  wt-button--primary wt-button--md  wt-button--block trip-sidebar__wish-list-button"
-                          >
+                          disabled>
                           Book Now
                         </a></div>
                       </div>
@@ -1619,23 +1632,33 @@ Come willing to begin anew - busting out of quarantine, and reconnecting with ol
           <div class="wt-col-sm-4 wt-col-md-4 wt-col-lg-3 hide-sm">
             <div class="trip-sidebar">
               <div class="trip-sidebar__package-block">
-                <div data-testid="trip_full_price" class="wt-text trip-sidebar__price">Rs. {{trip.price}}</div>
+                {% if trip.Amount %}
+                <div class="wt-text trip-sidebar__price">Now</div>
+                <div data-testid="trip_full_price" class="wt-text trip-sidebar__price">PKR {{ trip.price|subtract:trip.Amount }}</div>
                 <div class="wt-text wt-text--placeholder wt-text--blod trip-sidebar__deposit-row">
                   <div class="clearfix"></div>
                 </div>
                 <hr class="trip-sidebar__hr">
                 <div class="wt-form-group" style="width: 250px">
                 </div>
-                {%if trip.Amount %}
+
                 <div class="wt-form-group" style="text-align: center;">
-                    <strong>After Discount: {{trip.Amount}}</strong>
+                    <strong>Originally: {{ trip.price }}</strong>
+                </div>
+                {% else %}
+                <div data-testid="trip_full_price" class="wt-text trip-sidebar__price">PKR {{trip.price}}</div>
+                <div class="wt-text wt-text--placeholder wt-text--blod trip-sidebar__deposit-row">
+                  <div class="clearfix"></div>
+                </div>
+                <hr class="trip-sidebar__hr">
+                <div class="wt-form-group" style="width: 250px">
                 </div>
                 {%endif%}
                 <div class="wt-form-group">
                   <div class="wt-checkout-button"></div>
                   <div class="contact-organizer undefined"><a onclick="popupHandler()"
                       class="wt-button  wt-button--primary wt-button--md  wt-button--block trip-sidebar__wish-list-button"
-                      >
+                      disabled>
                       Book Now
                     </a></div>
                 </div>

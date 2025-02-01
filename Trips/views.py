@@ -276,6 +276,7 @@ import re
 def book(request,id):
     trip=Trip.objects.filter(id=id).first()
     desc= re.split(',|\n', trip.Included)
+    not_included=re.split(',|\n', trip.NotIncluded)
     if(request.session.has_key('trip_id')):
         request.session.pop('trip_id')
     request.session['trip_id']=id
@@ -288,7 +289,7 @@ def book(request,id):
     size=trip.people-size
     prof=Profile1.objects.filter(user=trip.user).first()
     pic=prof.picture
-    return render(request,'book.html',{'trip':trip,'desc':desc,'size':size,'pic':pic})
+    return render(request,'book.html',{'trip':trip,'desc':desc, 'not_included': not_included, 'size':size,'pic':pic})
 def ticket_book(request):
     if request.method == "POST":
         participent=request.POST.get('part', '')
