@@ -224,17 +224,27 @@ def Trips(request):
         if request.method=="POST":
             fro =request.POST.get('from', '')
             to = request.POST.get('to', '')
-            trip=Trip.objects.filter(Destination=to,city=fro)
-            day=trip.Edate-trip.Sdate
-            day=day.days
-            return render(request,'Trips.html',{'Trips':trip,'user':User,'day':day})
+            filters = {}
+            if to and len(to) > 0:
+                filters["Destination"] = to
+            if fro and len(fro) > 0:
+                filters["city"] = fro
+            trip=Trip.objects.filter(**filters)
+            if not trip:
+                return render(request,'Trips.html',{'Trips':trip,'user':User})
+            trips_list=[]
+            for i in trip:
+                day=((i.Edate-i.Sdate).days)
+                prof=Profile1.objects.filter(user=i.user).first()
+                trips_list.append([i,prof,day])
+
+            return render(request,'Trips.html',{'Trips':trips_list,'user':User})
         else:
             tri=Trip.objects.all()
             trip=[]
             for i in tri:
                 day=((i.Edate-i.Sdate).days)
                 prof=Profile1.objects.filter(user=i.user).first()
-                print("\n",prof,"\n")
                 trip.append([i,prof,day])
 
             return render(request,'Trips.html',{'Trips':trip,'user':User})
