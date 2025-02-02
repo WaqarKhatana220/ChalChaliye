@@ -1,6 +1,9 @@
+import os
 from django.db import models
 from django.contrib.auth.models import User
 
+from django.core.files import File
+from django.conf import settings
 
 # Create your models here.
 class Trip(models.Model):
@@ -23,6 +26,15 @@ class Trip(models.Model):
     Gsize=models.IntegerField()
     Amount=models.IntegerField()
     people=models.IntegerField(null=True, blank=True)
+    
+    def save(self, *args, **kwargs):
+        if not self.picture:
+            dummy_image_path = os.path.join(settings.STATICFILES_DIRS[0], 'images/dummy_landscape.jpg')
+            if os.path.exists(dummy_image_path):
+                with open(dummy_image_path, 'rb') as img:
+                    self.picture.save('dummy_landscape.jpg', File(img), save=False)
+        super().save(*args, **kwargs)
+
     def __str__(self):
         return self.Title
     

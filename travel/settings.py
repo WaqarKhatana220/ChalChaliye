@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
 # import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -139,3 +140,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
 MEDIA_URL = '//'
+
+PHOTO_BASE_URL = config('PHOTO_BASE_URL', default='http://localhost:8000')

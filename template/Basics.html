@@ -1634,66 +1634,24 @@
                     </div>
                     <div class="clearfix"></div>
                   </div>
-                  <hr class="trip-builder-hr">
-                  <div class="wt-row wt-form-grop"><label
-                      class="wt-col-xs-12 trip-builder-select-label wt-text wt-text--medium">Photos</label>
+                  <div class="wt-row wt-form-grop">
+                    <label class="wt-col-xs-12 trip-builder-select-label wt-text wt-text--medium"></label>
                     <div class="wt-col-xs-12">
                       <div class="trip-builder-images">
                         <div class="trip-builder-images__image-container trip-builder-images__image-container--main">
-                          <div class="trip-builder-images__drop-area undefined">
-                            <div
-                              class="trip-builder-images__image trip-builder-images__image--main trip-builder-images__image--drop-area-bg"
-                              style="background-image: url(&quot;https://www.wetravel.com/assets/media/trip_large_placeholder.jpg&quot;);">
+                          <div class="trip-builder-images__drop-area">
+                            <div class="trip-builder-images__image trip-builder-images__image--main trip-builder-images__image--drop-area-bg"
+                              style="background-image: url('/static/images/dummy_landscape.jpg');">
                               <div class="trip-builder-images__background-overlap"></div>
                               <div class="trip-builder-images__buttons">
-
-
-                                <!-- Section Start -->
-                                <!-- Dont Delete This Section -->
-
-                                <div class="uploadButton">
-                                  <div>
-                                    <input class="uploadFile" style="display: none" type="file" id="files" name="img"
-                                    accept="image/*">
-      
-                                  <label for="files" id="upload"
-                                    class="wt-button  wt-button--primary wt-button--md  trip-builder-images__button">Upload
-                                    Profile Picture</label>
-                                  </div>
-                                  <div id="list"></div>
-
-                                </div>
-
-                                <script>
-                                  document.getElementById('files').addEventListener('change', handleFileSelect, false);
-
-                                  function handleFileSelect(evt) {
-
-                                    var files = evt.target.files;
-
-                                    var f = files[0];
-
-                                    var reader = new FileReader();
-
-                                    reader.onload = (function (theFile) {
-
-                                      return function (e) {
-
-                                        document.getElementById('list').innerHTML = ['<img src="', e.target.result, '" title="', theFile.name, '" width="50" >'].join('');;
-                                        document.getElementById('upload').innerHTML = "Change Image";
-                                      };
-
-                                    })(f);
-
-                                    reader.readAsDataURL(f);
-
-                                  }
-
-
-                                </script>
-
-                                <!-- Section End -->
-
+                                
+                                <!-- Beautiful Note -->
+                                <p class="wt-text wt-text--small wt-text--italic wt-mb-md">
+                                  ✨ "Sample Cover Photo" ✨
+                                </p>
+                  
+                                <!-- No Upload Feature, Just a Static Image -->
+                  
                               </div>
                             </div>
                           </div>
@@ -1702,6 +1660,7 @@
                       <div class="clearfix"></div>
                     </div>
                   </div>
+                  
                 <!-- </form> -->
               </div>
               <div class="builder-form-layout__actions hidden-xs"><button
