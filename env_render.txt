@@ -1,0 +1,10 @@
+SECRET_KEY='k(4i#gmi79(uto(%dcrrawoiyswg2jy2!mq_u6(d16km+v&g!^'
+DB_HOST='dpg-cufop4lumphs73b4r1jg-a.oregon-postgres.render.com'
+DB_NAME='chalchaliye'
+DB_USER='chalchaliye_user'
+DB_PASSWORD='zm1Soipt8daJcb1xvRKSazEFeUDKLe6N'
+DB_PORT='5432'
+DEBUG=True
+
+MEDIA_URL='//'
+STATIC_URL='/static/'
