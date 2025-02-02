@@ -145,17 +145,16 @@ def Price(request):
         Gsize=0
         Amount=0
         if discount == "yes":
-            Gsize = int(request.POST.get('groupSize', ''))
+            Gsize = 0
             Amount = int(request.POST.get('amount', ''))
             # print(price,DeadLine,discount,Gsize,Amount)
-            print(type(Gsize),type(Amount),DeadLine)
 
         if(request.session.has_key('Price')):
             request.session.pop('Price')
             request.session.pop('bookingDeadline')
             name = request.session.pop('discount')
             if name == "yes":
-                request.session.pop('groupSize')
+                # request.session.pop('groupSize')
                 request.session.pop('amount')
         if (request.session.has_key('Title')):
 

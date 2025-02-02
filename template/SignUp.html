@@ -1558,7 +1558,7 @@
             <div class="signup-content">
               <div class="signup-form">
                 <h2 class="form-title">Sign Up</h2>
-                <form class="register-form" id="register-form" method="POST" action="{%url 'SignUp'%}">
+              <form class="register-form" id="register-form" method="POST" action="{%url 'SignUp'%}">
                   {%csrf_token%}
                   <div class="form-group">
                     <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
@@ -1572,10 +1572,10 @@
                     <label for="lname"><i class="zmdi zmdi-account material-icons-name"></i></label>
                     <input type="text" name="lname" id="lname" placeholder="Last Name" required>
                   </div>
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label for="cnic"><i class="zmdi zmdi-account material-icons-name"></i></label>
                     <input type="text" name="cnic" id="cnic" placeholder="CNIC" required>
-                  </div>
+                  </div> -->
                   <div class="form-group">
                     <label for="email"><i class="zmdi zmdi-email"></i></label>
                     <input type="email" name="Email" id="email" placeholder="Email Address" required>

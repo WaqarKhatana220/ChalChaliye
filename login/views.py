@@ -136,10 +136,11 @@ def profile(request):
 		l=USER.last_name
 		phone=prof.phone
 		address=prof.address
-		if(prof.address!=""):
+		ad = []
+		if prof.address and len(prof.address)>0:
 			ad=address.split(",")
 		print(email,f,l)
-		a1=ad[0]
+		a1=ad[0] if len(ad)>0 else ""
 		pic=prof.picture
 		print("\n\n",pic)
 		print("\n\n",pic)

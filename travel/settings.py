@@ -127,7 +127,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = config('STATIC_URL', default='/static/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS=[
 os.path.join(BASE_DIR,"static")
 ]
@@ -139,6 +140,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = '//'
+MEDIA_URL = config('MEDIA_URL', default='//')
 
 PHOTO_BASE_URL = config('PHOTO_BASE_URL', default='http://localhost:8000')

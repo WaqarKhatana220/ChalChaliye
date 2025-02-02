@@ -1391,29 +1391,13 @@
                     <h1 class="wt-h2 trip-header__trip-title">{{trip.Title}}</h1>
                   </div>
                 </div>
-                <!-- <div class="wt-row">
-                  <div class="wt-col-md-2 wt-col-lg-2"></div>
-                  <div class="wt-col-lg-5 wt-col-md-4 wt-col-sm-12">
-                    <p class="wt-text wt-text--regular trip-header__location-container"><i
-                        class="wt-icon wt-icon-location trip-header__location-icon"></i><span
-                        class="wt-text trip-header__location">to</span></p>
-                  </div>
-                </div> -->
-                <!-- <div class="wt-row">
-                  <div class="wt-col-md-2"></div>
-                  <div class="wt-col-md-7 trip-header__trip-title-container">
-                    <h1 class="wt-h2 trip-header__trip-title">{{trip.Destination}}</h1>
-                  </div>
-                </div> -->
               </div>
             </div>
           </div>
         </div>
         <div class="wt-container trip-header__general">
           <div class="wt-row">
-            <div class="wt-col-lg-2 wt-col-md-2 wt-col-sm-12 trip-header__avatar-container"><a
-                href="https://www.wetravel.com/trips/sweet-freedom-yoga-retreat-peter-walters-yoga-cobb-74632441#organizer-info"
-                class="wt-h3 trip-header__organizer-name">
+            <div class="wt-col-lg-2 wt-col-md-2 wt-col-sm-12 trip-header__avatar-container">
                 <div class="avatar__container trip-header__avatar"><img
                     class="avatar avatar--big trip-header__avatar-photo" alt=""
                     src="{% get_photo_base_url %}{{pic.url}}">
@@ -1421,7 +1405,6 @@
               </a></div>
             <div class="wt-col-md-9 wt-col-lg-9 trip-header__trip-organizer">
               <div><a
-                  href="https://www.wetravel.com/trips/sweet-freedom-yoga-retreat-peter-walters-yoga-cobb-74632441#organizer-info"
                   class="wt-h3 trip-header__organizer-name">By: {{trip.user.username}}</a>
                 <div class="verification-checkmark undefined"><i
                     class="wt-icon wt-icon-ok verification-checkmark__trigger-icon"></i>

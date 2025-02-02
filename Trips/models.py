@@ -23,7 +23,7 @@ class Trip(models.Model):
     price=models.IntegerField()
     DeadLine=models.DateField()
     discount=models.CharField(max_length=32)
-    Gsize=models.IntegerField()
+    Gsize=models.IntegerField(null=True, blank=True)
     Amount=models.IntegerField()
     people=models.IntegerField(null=True, blank=True)
     
