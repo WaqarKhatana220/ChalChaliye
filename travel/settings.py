@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY', default='123')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['travel-chalapp.herokuapp.com','127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['chalchaliye.onrender.com','127.0.0.1', 'localhost']
 
 
 # Application definition
