@@ -1,28 +1,25 @@
+import os
 from django.db import models
 from django.conf import settings
 from django.contrib.auth.models import User
+from django.core.files import File
 class Profile1(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
 	address=models.CharField(max_length=500,null=True)
 	phone=models.CharField(null=True,max_length=100)
 	cnic=models.CharField(null=True,max_length=100)
 	picture = models.ImageField(null=True,upload_to ='images/')
+ 
+	def save(self, *args, **kwargs):
+		if not self.picture:
+			dummy_image_path = os.path.join(settings.STATICFILES_DIRS[0], 'images/dummy_profile.png')
+			if os.path.exists(dummy_image_path):
+				with open(dummy_image_path, 'rb') as img:
+					self.picture.save('dummy_profile.png', File(img), save=False)
+		super().save(*args, **kwargs)
+        
 	def __str__(self):
 		return str(self.user.username)
-	def save(self, url='', *args, **kwargs):
-		if self.picture != '' and url != '': # Don't do anything if we don't get passed anything!
-			image = download_image(url) # See function definition below
-			try:
-				filename = urlparse.urlparse(url).path.split('/')[-1]
-				self.picture = filename
-				tempfile = image
-				tempfile_io = cStringIO.StringIO() # Will make a file-like object in memory that you can then save
-				tempfile.save(tempfile_io, format=image.format)
-				self.picture.save(filename, ContentFile(tempfile_io.getvalue()), save=False) # Set save=False otherwise you will have a looping save method
-			except Exception:
-				print ("Error trying to save model: saving image failed: " + str(e))
-				pass
-		super(Profile1, self).save(*args, **kwargs) # We've gotten the image into the ImageField above...now we actually need to save it. We've redefined the save method for Product, so super *should* get the parent of class Product, models.Model and then run IT'S save method, which will save the Product like normal
 
 	def download_image(url):
 		"""Downloads an image and makes sure it's verified.

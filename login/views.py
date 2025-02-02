@@ -72,7 +72,7 @@ def HomePage(request):
 	if request.user.is_authenticated:
 		USER=request.user
 		User=USER.username.split(" ")
-		print(type(USER.username))
+		print(type(USER.username), 'herere')
 		if(len(User)==1):
 			User=User[0][0]+User[0][-1]
 		else:
